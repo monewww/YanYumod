@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{279AFCDF-31DB-4F85-8950-C1B8B7B3DD49}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YanYu</RootNamespace>
+    <AssemblyName>YanYu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>E:\steam\steamapps\common\RimWorld\Mods\YanYu\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>E:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>E:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Plugins\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>E:\steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ability\AbilittEffect\AbilityEffecy_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompAbility_BasicSwordsmanship_SuperSkill.cs" />
+    <Compile Include="Ability\AbilittEffect\AbilityEffecy_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompProperties_BasicSwordsmanship_SuperSkill.cs" />
+    <Compile Include="Ability\AbilittEffect\AbilityEffecy_Martial\SwordSkill\CompAbilityEffect_SwordBase.cs" />
+    <Compile Include="Ability\AbilittEffect\AbilityEffecy_Martial\SwordSkill\CompProperties_AbilitySwordBase.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thing\ThingComp\ThingComp_Use\HediffComp_MartialHediffWithAbility\HediffCompProperties_MartialHediffWithAbility.cs" />
+    <Compile Include="Thing\ThingComp\ThingComp_Use\HediffComp_MartialHediffWithAbility\HediffComp_MartialHediffWithAbility.cs" />
+    <Compile Include="Thing\ThingComp\ThingComp_Use\ThingComp_UseMartial\ThingCompProperties_UseMartialbook.cs" />
+    <Compile Include="Thing\ThingComp\ThingComp_Use\ThingComp_UseMartial\ThingComp_UseMartialbook.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Ability\AbilittEffect\AbilityEffecy_Martial\FistSkill\" />
+    <Folder Include="Ability\AbilittEffect\AbilityEffecy_Martial\SaberSkill\" />
+    <Folder Include="Ability\AbilittEffect\AbilityEffecy_Martial\StaffSkill\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
