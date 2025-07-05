@@ -44,18 +44,25 @@ namespace YanYu
                 return;
             }
 
-            var existingMartial = user.health.hediffSet.hediffs.FirstOrDefault(h => h.def.defName.StartsWith("YanYu_"));
+            var existingMartialHediff = user.health.hediffSet.hediffs.FirstOrDefault(h => h.def.defName.StartsWith("YanYu_"));
 
-            if (existingMartial != null)
+            if (existingMartialHediff != null)
             {
-                bool exsistingMartialIsUnique = existingMartial.TryGetComp<HediffComp_MartialHediffWithAbility>()?.IsUniqueMartial ?? false;
+                bool exsistingMartialIsUnique = existingMartialHediff.TryGetComp<HediffComp_MartialHediffWithAbility>()?.IsUniqueMartial ?? false;
                 if (exsistingMartialIsUnique)
                 {
                     Messages.Message("YanYu_Martialbook_AlreadyHasUniqueMartial", user, MessageTypeDefOf.NeutralEvent, false);
                     return;
                 }
-                //删除已有武学
-                user.health.RemoveHediff(existingMartial);
+                //删除已有武学和hidiff
+                foreach (var ability in existingMartialHediff.TryGetComp<HediffComp_MartialHediffWithAbility>().Props.YanYu_Martials)
+                {
+                    if (user.abilities.GetAbility(ability) != null)
+                    {
+                        user.abilities.RemoveAbility(ability);
+                    }
+                }
+                user.health.RemoveHediff(existingMartialHediff);
             }
             //获取目标HediffDef
             HediffDef targetHediffDef = Props.giveHediffDef;
@@ -66,7 +73,15 @@ namespace YanYu
             }
             //添加新的武学
             HediffCompProperties_MartialHediffWithAbility hediffcomp = targetHediffDef.CompProps<HediffCompProperties_MartialHediffWithAbility>();
-            user.abilities.GainAbility(hediffcomp.YanYu_Martial);
+            foreach (var martial in hediffcomp.YanYu_Martials)
+            {
+                user.abilities.GainAbility(martial);
+            }
+            //添加新的Hediff
+            Hediff newHediff = HediffMaker.MakeHediff(targetHediffDef, user);
+            user.health.AddHediff(newHediff);
+
+
             isGetAbility = true;
 
 

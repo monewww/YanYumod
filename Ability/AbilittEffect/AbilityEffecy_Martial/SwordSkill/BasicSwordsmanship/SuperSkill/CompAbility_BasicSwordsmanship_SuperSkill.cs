@@ -52,23 +52,6 @@ namespace YanYu
                 }
             }
 
-            ////获取指定方向的矩形范围
-            //List<IntVec3> targetPositions = GetIntVec3s(target, parent.verb.EffectiveRange);
-
-            ////获取范围内的敌方
-            ////不对机械族生效？
-            //List<Pawn> mapPawnInRange = new List<Pawn>();
-            //foreach (Pawn mapPawn in GetPawn.Map.mapPawns.AllPawnsSpawned)
-            //{
-            //    //范围内
-            //    if (!targetPositions.Contains(mapPawn.Position)) continue;
-            //    //自己
-            //    if (mapPawn.Equals(GetPawn)) continue;
-            //    //友伤保护
-            //    if (mapPawn.Faction == GetPawn.Faction) continue;
-            //    mapPawnInRange.Add(mapPawn);
-            //}
-
 
         }
         public override void DrawEffectPreview(LocalTargetInfo target)

@@ -37,9 +37,16 @@ namespace YanYu
             //待定
             try
             {
-                if (Props.YanYu_Martial != null)
+
+                if (Props.YanYu_Martials != null)
                 {
-                    GetPawn.abilities.RemoveAbility(Props.YanYu_Martial);
+                    foreach (var martial in Props.YanYu_Martials)
+                    {
+                        if (GetPawn.abilities.GetAbility(martial) != null)
+                        {
+                            GetPawn.abilities.RemoveAbility(martial);
+                        }
+                    }
                 }
                      
             }
