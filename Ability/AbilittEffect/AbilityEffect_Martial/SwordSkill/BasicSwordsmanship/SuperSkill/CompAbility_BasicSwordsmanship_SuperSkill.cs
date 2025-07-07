@@ -21,7 +21,7 @@ namespace YanYu
             var tickToFleck2 = Find.TickManager.TicksGame + 3;
             var tickToFleck3 = Find.TickManager.TicksGame + 6;
 
-
+            float scale = 5f;
             List<Thing> ignoredThings = new List<Thing>
             {
                 GetPawn
@@ -36,7 +36,7 @@ namespace YanYu
                 AreaAttactEffectUtility.DoEffectRotation(
                     GetPawn,
                     target,
-                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck1,10f),
+                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck1,scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
                     offsetForward: 5f
@@ -48,7 +48,7 @@ namespace YanYu
                 AreaAttactEffectUtility.DoEffectRotation(
                     GetPawn,
                     target,
-                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2,10f),
+                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
                     offsetForward: 5f
@@ -59,9 +59,9 @@ namespace YanYu
                 AreaAttactEffectUtility.DoEffectRotation(
                     GetPawn,
                     target,
-                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck3, 3f),
+                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck3, scale),
                     rotationAngle: 0f,
-                    offsetRight: -3f,
+                    offsetRight: -2.8f,
                     offsetForward: 3f
                 ),
                 tickToFleck3
@@ -81,6 +81,9 @@ namespace YanYu
             DelayedActionManager.Register(() =>
             {
                 Pawn attacker = GetPawn;
+                var comboFleck1Time = tickToCombo + 3;
+                var comboFleck2Time = tickToCombo + 6;
+                var comboFleck3Time = tickToCombo + 9;
                 if (!attacker.Destroyed && attacker.Spawned)
                 {
                     List<Thing> DelayignoredThings = new List<Thing> { attacker };
@@ -89,6 +92,40 @@ namespace YanYu
                         if (mapPawn.Faction == attacker.Faction)
                             DelayignoredThings.Add(mapPawn);
                     }
+                    //三段特效
+                    DelayedActionManager.Register(() =>
+                        AreaAttactEffectUtility.DoEffectRotation(
+                            attacker,
+                            target,
+                            FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_1, scale),
+                            rotationAngle: 0f,
+                            offsetRight: 0f,
+                            offsetForward: 10f
+                        ),
+                        comboFleck1Time
+                    );
+                    DelayedActionManager.Register(() =>
+                        AreaAttactEffectUtility.DoEffectRotation(
+                            attacker,
+                            target,
+                            FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_2, scale),
+                            rotationAngle: 0f,
+                            offsetRight: 2f,
+                            offsetForward: 10f
+                        ),
+                        comboFleck2Time
+                    );
+                    DelayedActionManager.Register(() =>
+                        AreaAttactEffectUtility.DoEffectRotation(
+                            attacker,
+                            target,
+                            FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_3, scale),
+                            rotationAngle: 0f,
+                            offsetRight: 2f,
+                            offsetForward: 9f
+                        ),
+                        comboFleck3Time
+                    );
 
                     AreaAttackUtility.DoEllipticalDamage(
                         attacker,
