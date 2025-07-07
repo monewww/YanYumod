@@ -16,7 +16,7 @@ namespace YanYu
         {
             List<IntVec3> explosedPosition = new List<IntVec3>();
             var damagedPawns = new HashSet<Pawn>();
-            var tickToCombo = Find.TickManager.TicksGame + (int)(0.5f * 60f);
+            var tickToCombo = Find.TickManager.TicksGame + 60;
             var tickToFleck1 = Find.TickManager.TicksGame ; // 第一段特效立即触发
             var tickToFleck2 = Find.TickManager.TicksGame + 3;
             var tickToFleck3 = Find.TickManager.TicksGame + 6;
@@ -31,6 +31,12 @@ namespace YanYu
             {
                 if (mapPawn.Faction == GetPawn.Faction) ignoredThings.Add(mapPawn);
             }
+            //喊口号！
+            MoteMaker.ThrowText(
+                GetPawn.DrawPos + new Vector3(0, 0, 0.5f), 
+                map: GetPawn.Map,
+                text: "Substance Within Feint!".Translate()  
+            );
             //三段特效
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffectRotation(
@@ -77,67 +83,75 @@ namespace YanYu
                 ignoredThings: ignoredThings
             );
 
-            //延迟造成二段伤害
-            DelayedActionManager.Register(() =>
+            if (Random.value < Props.comboChance)
             {
-                Pawn attacker = GetPawn;
-                var comboFleck1Time = tickToCombo + 3;
-                var comboFleck2Time = tickToCombo + 6;
-                var comboFleck3Time = tickToCombo + 9;
-                if (!attacker.Destroyed && attacker.Spawned)
+                MoteMaker.ThrowText(
+                    GetPawn.DrawPos + new Vector3(0, 0, 0.5f), 
+                    map: GetPawn.Map,
+                    text: "Shadow in Pursuit!".Translate()
+                );
+                //延迟造成二段伤害
+                DelayedActionManager.Register(() =>
                 {
-                    List<Thing> DelayignoredThings = new List<Thing> { attacker };
-                    foreach (Pawn mapPawn in attacker.Map.mapPawns.AllPawnsSpawned)
+                    Pawn attacker = GetPawn;
+                    var comboFleck1Time = tickToCombo + 3;
+                    var comboFleck2Time = tickToCombo + 6;
+                    var comboFleck3Time = tickToCombo + 9;
+                    if (!attacker.Destroyed && attacker.Spawned)
                     {
-                        if (mapPawn.Faction == attacker.Faction)
-                            DelayignoredThings.Add(mapPawn);
+                        List<Thing> DelayignoredThings = new List<Thing> { attacker };
+                        foreach (Pawn mapPawn in attacker.Map.mapPawns.AllPawnsSpawned)
+                        {
+                            if (mapPawn.Faction == attacker.Faction)
+                                DelayignoredThings.Add(mapPawn);
+                        }
+                        //三段特效
+                        DelayedActionManager.Register(() =>
+                            AreaAttactEffectUtility.DoEffectRotation(
+                                attacker,
+                                target,
+                                FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_1, scale),
+                                rotationAngle: 0f,
+                                offsetRight: 0f,
+                                offsetForward: 10f
+                            ),
+                            comboFleck1Time
+                        );
+                        DelayedActionManager.Register(() =>
+                            AreaAttactEffectUtility.DoEffectRotation(
+                                attacker,
+                                target,
+                                FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_2, scale),
+                                rotationAngle: 0f,
+                                offsetRight: 2f,
+                                offsetForward: 10f
+                            ),
+                            comboFleck2Time
+                        );
+                        DelayedActionManager.Register(() =>
+                            AreaAttactEffectUtility.DoEffectRotation(
+                                attacker,
+                                target,
+                                FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_3, scale),
+                                rotationAngle: 0f,
+                                offsetRight: 2f,
+                                offsetForward: 9f
+                            ),
+                            comboFleck3Time
+                        );
+                        //二段伤害
+                        AreaAttackUtility.DoEllipticalDamage(
+                            attacker,
+                            target,
+                            20,
+                            3,
+                            Props.damage,
+                            DamageDefOf.Cut,
+                            ignoredThings: DelayignoredThings
+                        );
                     }
-                    //三段特效
-                    DelayedActionManager.Register(() =>
-                        AreaAttactEffectUtility.DoEffectRotation(
-                            attacker,
-                            target,
-                            FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_1, scale),
-                            rotationAngle: 0f,
-                            offsetRight: 0f,
-                            offsetForward: 10f
-                        ),
-                        comboFleck1Time
-                    );
-                    DelayedActionManager.Register(() =>
-                        AreaAttactEffectUtility.DoEffectRotation(
-                            attacker,
-                            target,
-                            FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_2, scale),
-                            rotationAngle: 0f,
-                            offsetRight: 2f,
-                            offsetForward: 10f
-                        ),
-                        comboFleck2Time
-                    );
-                    DelayedActionManager.Register(() =>
-                        AreaAttactEffectUtility.DoEffectRotation(
-                            attacker,
-                            target,
-                            FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_3, scale),
-                            rotationAngle: 0f,
-                            offsetRight: 2f,
-                            offsetForward: 9f
-                        ),
-                        comboFleck3Time
-                    );
-
-                    AreaAttackUtility.DoEllipticalDamage(
-                        attacker,
-                        target,
-                        20,
-                        3,
-                        Props.damage,
-                        DamageDefOf.Cut,
-                        ignoredThings: DelayignoredThings
-                    );
-                }
-            }, tickToCombo);
+                }, tickToCombo);
+            }
 
         }
         public override void DrawEffectPreview(LocalTargetInfo target)
