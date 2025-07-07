@@ -83,9 +83,6 @@ namespace YanYu
 
 
             isGetAbility = true;
-
-
-
         }
 
         public void SendLetter(Pawn user, bool isGetAbility)
