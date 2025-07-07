@@ -20,6 +20,8 @@ namespace YanYu
             var tickToFleck1 = Find.TickManager.TicksGame ; // 第一段特效立即触发
             var tickToFleck2 = Find.TickManager.TicksGame + 3;
             var tickToFleck3 = Find.TickManager.TicksGame + 6;
+            //技能后摇
+            GetPawn.stances.stagger.StaggerFor(tickToCombo);
 
             float scale = 5f;
             List<Thing> ignoredThings = new List<Thing>
