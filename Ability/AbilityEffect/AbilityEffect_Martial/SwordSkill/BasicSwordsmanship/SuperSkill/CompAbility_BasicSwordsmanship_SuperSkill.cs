@@ -21,7 +21,7 @@ namespace YanYu
             var tickToFleck2 = Find.TickManager.TicksGame + 3;
             var tickToFleck3 = Find.TickManager.TicksGame + 6;
             //技能后摇
-            GetPawn.stances.stagger.StaggerFor(tickToCombo);
+            GetPawn.stances.stagger.StaggerFor(60);
 
             float scale = 5f;
             List<Thing> ignoredThings = new List<Thing>
@@ -37,14 +37,14 @@ namespace YanYu
             MoteMaker.ThrowText(
                 GetPawn.DrawPos + new Vector3(0, 0, 0.5f), 
                 map: GetPawn.Map,
-                text: "Substance Within Feint!".Translate()  
+                text: "SubstanceWithinFeint".Translate()  
             );
             //三段特效
             DelayedActionManager.Register(() =>
-                AreaAttactEffectUtility.DoEffectRotation(
+                AreaAttactEffectUtility.DoEffect(
                     GetPawn,
                     target,
-                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck1,scale),
+                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck1,scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
                     offsetForward: 5f
@@ -53,10 +53,10 @@ namespace YanYu
             );
 
             DelayedActionManager.Register(() =>
-                AreaAttactEffectUtility.DoEffectRotation(
+                AreaAttactEffectUtility.DoEffect(
                     GetPawn,
                     target,
-                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2, scale),
+                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
                     offsetForward: 5f
@@ -64,10 +64,10 @@ namespace YanYu
                 tickToFleck2
             );
             DelayedActionManager.Register(() =>
-                AreaAttactEffectUtility.DoEffectRotation(
+                AreaAttactEffectUtility.DoEffect(
                     GetPawn,
                     target,
-                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck3, scale),
+                    FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck3, scale),
                     rotationAngle: 0f,
                     offsetRight: -2.8f,
                     offsetForward: 3f
@@ -88,9 +88,9 @@ namespace YanYu
             if (Random.value < Props.comboChance)
             {
                 MoteMaker.ThrowText(
-                    GetPawn.DrawPos + new Vector3(0, 0, 0.5f), 
+                    GetPawn.DrawPos + new Vector3(0, 0, 1f), 
                     map: GetPawn.Map,
-                    text: "Shadow in Pursuit!".Translate()
+                    text: "ShadowInPursuit".Translate()
                 );
                 //延迟造成二段伤害
                 DelayedActionManager.Register(() =>
@@ -109,10 +109,10 @@ namespace YanYu
                         }
                         //三段特效
                         DelayedActionManager.Register(() =>
-                            AreaAttactEffectUtility.DoEffectRotation(
+                            AreaAttactEffectUtility.DoEffect(
                                 attacker,
                                 target,
-                                FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_1, scale),
+                                FleckMaker.GetDataStatic(attacker.Position.ToVector3Shifted(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_1, scale),
                                 rotationAngle: 0f,
                                 offsetRight: 0f,
                                 offsetForward: 10f
@@ -120,10 +120,10 @@ namespace YanYu
                             comboFleck1Time
                         );
                         DelayedActionManager.Register(() =>
-                            AreaAttactEffectUtility.DoEffectRotation(
+                            AreaAttactEffectUtility.DoEffect(
                                 attacker,
                                 target,
-                                FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_2, scale),
+                                FleckMaker.GetDataStatic(attacker.Position.ToVector3Shifted(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_2, scale),
                                 rotationAngle: 0f,
                                 offsetRight: 2f,
                                 offsetForward: 10f
@@ -131,10 +131,10 @@ namespace YanYu
                             comboFleck2Time
                         );
                         DelayedActionManager.Register(() =>
-                            AreaAttactEffectUtility.DoEffectRotation(
+                            AreaAttactEffectUtility.DoEffect(
                                 attacker,
                                 target,
-                                FleckMaker.GetDataStatic(attacker.Position.ToVector3(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_3, scale),
+                                FleckMaker.GetDataStatic(attacker.Position.ToVector3Shifted(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_3, scale),
                                 rotationAngle: 0f,
                                 offsetRight: 2f,
                                 offsetForward: 9f
@@ -175,7 +175,5 @@ namespace YanYu
                 color: Color.yellow
             );
         }
-
-
     }
 }

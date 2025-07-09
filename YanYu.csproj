@@ -52,10 +52,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ability\AbilittEffect\AbilityEffect_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompAbility_BasicSwordsmanship_SuperSkill.cs" />
-    <Compile Include="Ability\AbilittEffect\AbilityEffect_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompProperties_BasicSwordsmanship_SuperSkill.cs" />
-    <Compile Include="Ability\AbilittEffect\AbilityEffect_Martial\SwordSkill\CompAbilityEffect_SwordBase.cs" />
-    <Compile Include="Ability\AbilittEffect\AbilityEffect_Martial\SwordSkill\CompProperties_AbilitySwordBase.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompAbility_BasicSwordsmanship_SuperSkill.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompProperties_BasicSwordsmanship_SuperSkill.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\CompAbilityEffect_SwordBase.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\CompProperties_AbilitySwordBase.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\WuShangSwordsmanship\SuperSkill\CompAbility_WuShangSwordsmanship_SuperSkill.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\WuShangSwordsmanship\SuperSkill\CompProperties_WuShangSwordsmanship_SuperSkill.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttactEffectUtility.cs" />
     <Compile Include="YanYuDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,9 +70,9 @@
     <Compile Include="Utilities\DelayedActionManager.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Ability\AbilittEffect\AbilityEffect_Martial\FistSkill\" />
-    <Folder Include="Ability\AbilittEffect\AbilityEffect_Martial\SaberSkill\" />
-    <Folder Include="Ability\AbilittEffect\AbilityEffect_Martial\StaffSkill\" />
+    <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\" />
+    <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\SaberSkill\" />
+    <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\StaffSkill\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

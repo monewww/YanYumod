@@ -88,13 +88,13 @@ namespace YanYu
         public void SendLetter(Pawn user, bool isGetAbility)
         {
             //正常情况
-            string title = "UseBook_LetterTilie";
-            string text = "UseBook_LetterText_PawnGetNewLevel";
+            string title = "UseBook_LetterTilie".Translate();
+            string text = "UseBook_LetterText_PawnGetNewLevel".Translate();
 
             //学习了新的技能
             if (isGetAbility)
             {
-                text += "UseBook_LetterText_PawnGetAbility";
+                text += "UseBook_LetterText_PawnGetAbility".Translate();
             }
 
             Find.LetterStack.ReceiveLetter(title, text, LetterDefOf.PositiveEvent, user, null, null, null, null, 0, true);
