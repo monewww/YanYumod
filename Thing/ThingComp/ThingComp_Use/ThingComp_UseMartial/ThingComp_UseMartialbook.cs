@@ -1,7 +1,6 @@
 ﻿
 
 
-
 using RimWorld;
 using Verse;
 using Verse.Sound;
@@ -44,46 +43,70 @@ namespace YanYu
                 return;
             }
 
-            var existingMartialHediff = user.health.hediffSet.hediffs.FirstOrDefault(h => h.def.defName.StartsWith("YanYu_"));
+            /* ───────────── 1. 检查并卸载旧武学 ───────────── */
+            var existingMartialHediff =
+                user.health.hediffSet.hediffs.FirstOrDefault(h => h.def.defName.StartsWith("YanYu_Martial"));
 
             if (existingMartialHediff != null)
             {
-                bool exsistingMartialIsUnique = existingMartialHediff.TryGetComp<HediffComp_MartialHediffWithAbility>()?.IsUniqueMartial ?? false;
-                if (exsistingMartialIsUnique)
+                bool unique = existingMartialHediff.TryGetComp<HediffComp_MartialHediff>()?.IsUniqueMartial ?? false;
+                if (unique)
                 {
-                    Messages.Message("YanYu_Martialbook_AlreadyHasUniqueMartial", user, MessageTypeDefOf.NeutralEvent, false);
+                    Messages.Message("YanYu_Martialbook_AlreadyHasUniqueMartial", user,
+                        MessageTypeDefOf.NeutralEvent, false);
                     return;
                 }
-                //删除已有武学和hidiff
-                foreach (var ability in existingMartialHediff.TryGetComp<HediffComp_MartialHediffWithAbility>().Props.YanYu_Martials)
+
+                /* 移除旧能力 */
+                var oldComp = existingMartialHediff.TryGetComp<HediffComp_MartialHediff>();
+                if (oldComp?.Props.YanYu_Martials != null)
                 {
-                    if (user.abilities.GetAbility(ability) != null)
-                    {
-                        user.abilities.RemoveAbility(ability);
-                    }
+                    foreach (var abl in oldComp.Props.YanYu_Martials)
+                        user.abilities.RemoveAbility(abl);
                 }
+
+                ///* 移除旧被动 */
+                //if (oldComp?.Props.YanYu_PassiveEffects != null)
+                //{
+                //    foreach (string passiveName in oldComp.Props.YanYu_PassiveEffects)
+                //        PassiveEffectUtil.RemovePassive(user, passiveName);
+                //}
+
+                /* 删除旧 Hediff */
                 user.health.RemoveHediff(existingMartialHediff);
             }
-            //获取目标HediffDef
-            HediffDef targetHediffDef = Props.giveHediffDef;
-            if (targetHediffDef == null)
+
+            /* ───────────── 2. 准备新 HediffDef ───────────── */
+            HediffDef targetDef = Props.giveHediffDef;
+            if (targetDef == null)
             {
                 Log.Error("ThingComp_UseMartialbook targetHediffDef is null");
                 return;
             }
-            //添加新的武学
-            HediffCompProperties_MartialHediffWithAbility hediffcomp = targetHediffDef.CompProps<HediffCompProperties_MartialHediffWithAbility>();
-            foreach (var martial in hediffcomp.YanYu_Martials)
-            {
-                user.abilities.GainAbility(martial);
-            }
-            //添加新的Hediff
-            Hediff newHediff = HediffMaker.MakeHediff(targetHediffDef, user);
-            user.health.AddHediff(newHediff);
 
+            var newProps = targetDef.CompProps<HediffCompProperties_MartialHediff>();
+
+            /* ───────────── 3. 添加新能力 ───────────── */
+            if (newProps.YanYu_Martials != null)
+            {
+                foreach (var abl in newProps.YanYu_Martials)
+                    user.abilities.GainAbility(abl);
+            }
+
+            /* ───────────── 4. 添加新被动 ───────────── */
+            //if (newProps.YanYu_PassiveEffects != null)
+            //{
+            //    foreach (string passiveName in newProps.YanYu_PassiveEffects)
+            //        PassiveEffectUtil.AddPassive(user, passiveName);
+            //}
+
+            /* ───────────── 5. 给新 Hediff ───────────── */
+            Hediff newHediff = HediffMaker.MakeHediff(targetDef, user);
+            user.health.AddHediff(newHediff);
 
             isGetAbility = true;
         }
+
 
         public void SendLetter(Pawn user, bool isGetAbility)
         {

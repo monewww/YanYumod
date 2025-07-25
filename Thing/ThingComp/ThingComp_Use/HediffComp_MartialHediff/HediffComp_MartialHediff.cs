@@ -6,13 +6,13 @@ using Verse;
 
 namespace YanYu
 {
-    public class HediffComp_MartialHediffWithAbility : HediffComp
+    public class HediffComp_MartialHediff : HediffComp
     {
-        public HediffCompProperties_MartialHediffWithAbility Props
+        public HediffCompProperties_MartialHediff Props
         {
             get
             {
-                return (HediffCompProperties_MartialHediffWithAbility)this.props;
+                return (HediffCompProperties_MartialHediff)this.props;
             }
         }
         public Pawn GetPawn
@@ -32,7 +32,7 @@ namespace YanYu
         }
 
         public override void CompPostPostRemoved()
-        {
+        {   
             base.CompPostPostRemoved();
             //待定
             try
@@ -48,7 +48,18 @@ namespace YanYu
                         }
                     }
                 }
-                     
+
+                //if (Props.YanYu_PassiveEffects != null)
+                //{
+                //    foreach (var passiveEffect in Props.YanYu_PassiveEffects)
+                //    {
+                //        if (GetPawn.TryGetComp<ThingComp_UseMartialbook>() is ThingComp_UseMartialbook comp)
+                //        {
+                //            comp.RemovePassiveEffect(passiveEffect);
+                //        }
+                //    }
+                //}
+
             }
             catch (Exception e) { }
         }
