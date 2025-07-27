@@ -25,6 +25,10 @@ namespace YanYu
             UseEffect(user, out bool isGetAbility);
 
             SendLetter(user, isGetAbility);
+            if (isGetAbility)
+            {
+                parent.Destroy();
+            }
         }
 
         private void ExtraEffect(Pawn user)
@@ -65,18 +69,10 @@ namespace YanYu
                         user.abilities.RemoveAbility(abl);
                 }
 
-                ///* 移除旧被动 */
-                //if (oldComp?.Props.YanYu_PassiveEffects != null)
-                //{
-                //    foreach (string passiveName in oldComp.Props.YanYu_PassiveEffects)
-                //        PassiveEffectUtil.RemovePassive(user, passiveName);
-                //}
-
                 /* 删除旧 Hediff */
                 user.health.RemoveHediff(existingMartialHediff);
             }
 
-            /* ───────────── 2. 准备新 HediffDef ───────────── */
             HediffDef targetDef = Props.giveHediffDef;
             if (targetDef == null)
             {
@@ -86,21 +82,11 @@ namespace YanYu
 
             var newProps = targetDef.CompProps<HediffCompProperties_MartialHediff>();
 
-            /* ───────────── 3. 添加新能力 ───────────── */
             if (newProps.YanYu_Martials != null)
             {
                 foreach (var abl in newProps.YanYu_Martials)
                     user.abilities.GainAbility(abl);
             }
-
-            /* ───────────── 4. 添加新被动 ───────────── */
-            //if (newProps.YanYu_PassiveEffects != null)
-            //{
-            //    foreach (string passiveName in newProps.YanYu_PassiveEffects)
-            //        PassiveEffectUtil.AddPassive(user, passiveName);
-            //}
-
-            /* ───────────── 5. 给新 Hediff ───────────── */
             Hediff newHediff = HediffMaker.MakeHediff(targetDef, user);
             user.health.AddHediff(newHediff);
 

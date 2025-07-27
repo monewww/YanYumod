@@ -13,15 +13,13 @@ namespace YanYu.Utilities
             LocalTargetInfo target,
             float radiusX,
             float radiusZ,
-            bool selfCenter = true,
+            IntVec3 center = default(IntVec3),
             bool halfElliptical = true,
             Color? color = null
         )
         {
             var map = attacker.Map;
-            Vector3 centerVec = selfCenter ? attacker.Position.ToVector3Shifted() : target.CenterVector3;
-            IntVec3 center = centerVec.ToIntVec3();
-
+            Vector3 centerVec = center == default(IntVec3) ? attacker.Position.ToVector3Shifted() : center.ToVector3Shifted();
             Vector3 dir = (target.Cell.ToVector3Shifted() - attacker.Position.ToVector3Shifted());
             dir.y = 0f; // 确保只在 XZ 平面上
             dir.Normalize(); // 转换为单位向量
@@ -66,15 +64,13 @@ namespace YanYu.Utilities
             Pawn attacker,
             LocalTargetInfo target,
             float radius,
-            bool targetCenter = false,
             IntVec3 center = default(IntVec3),
             float angle = 360f,
             Color? color = null
         )
         {
             var map = attacker.Map;
-            Vector3 centerVec = targetCenter ? target.Cell.ToVector3Shifted() : attacker.Position.ToVector3Shifted();
-            if (center == default(IntVec3)) center = centerVec.ToIntVec3();
+            Vector3 centerVec = center == default(IntVec3) ? attacker.Position.ToVector3Shifted() : center.ToVector3Shifted();
             Vector3 dir = (target.Cell.ToVector3Shifted() - attacker.Position.ToVector3Shifted());
             dir.y = 0f; // 确保只在 XZ 平面上
             dir.Normalize(); // 转换为单位向量
@@ -108,15 +104,13 @@ namespace YanYu.Utilities
             LocalTargetInfo target,
             float radiusX,
             float radiusZ,
-            bool targetCenter = false,
             IntVec3 center = default(IntVec3),
             bool halfDiamond = false,
             Color? color = null
             )
         {
             var map = attacker.Map;
-            Vector3 centerVec = targetCenter ? target.Cell.ToVector3Shifted() : attacker.Position.ToVector3Shifted();
-            if (center == default(IntVec3)) center = centerVec.ToIntVec3();
+            Vector3 centerVec = center == default(IntVec3) ? attacker.Position.ToVector3Shifted() : center.ToVector3Shifted();
             Vector3 dir = (target.Cell.ToVector3Shifted() - attacker.Position.ToVector3Shifted());
             dir.y = 0f; // 确保只在 XZ 平面上
             dir.Normalize(); // 转换为单位向量
