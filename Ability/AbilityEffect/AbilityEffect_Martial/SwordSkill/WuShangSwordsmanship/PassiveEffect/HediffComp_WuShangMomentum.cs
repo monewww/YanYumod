@@ -65,7 +65,7 @@ namespace YanYu
             dinfo.SetAmount(dinfo.Amount * (1f + damageBonus));
             DamageInfoUtil.AddArmorPenetration(ref dinfo, armorPenBonus);
 
-            Log.Message($"[舞殇剑势] {Pawn.LabelShort} 触发剑势，第 {currentSeverity} 层，增加伤害{damageBonus:P0} 穿甲{armorPenBonus:P0}");
+            //Log.Message($"[舞殇剑势] {Pawn.LabelShort} 触发剑势，第 {currentSeverity} 层，增加伤害{damageBonus:P0} 穿甲{armorPenBonus:P0}");
         }
 
 

@@ -88,5 +88,8 @@
     <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\HuaXuanSwordsmanship\PasiiveEffect\" />
     <Folder Include="Hediff\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apparel\CompProperties_RenameByGender.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
