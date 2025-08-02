@@ -69,7 +69,7 @@
     <Compile Include="HarmonyPatch\MartialPatchs.cs" />
     <Compile Include="HarmonyPatch\YanYu_Patchs.cs" />
     <Compile Include="Utilities\DamageInfo\DamageInfoUtil.cs" />
-    <Compile Include="Utilities\DamageInfo\HealUtil.cs" />
+    <Compile Include="Utilities\Heal\HealUtil.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttactEffectUtility.cs" />
     <Compile Include="YanYuPassiveEffect\PassiveEffectTrigger\HediffCompProperties_AttackTrigger.cs" />
     <Compile Include="YanYuPassiveEffect\PassiveEffectTrigger\HediffComp_AttackTrigger.cs" />
@@ -81,7 +81,8 @@
     <Compile Include="Thing\ThingComp\ThingComp_Use\ThingComp_UseMartial\ThingComp_UseMartialbook.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttackUtility.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttactEffectPromptUtility.cs" />
-    <Compile Include="Utilities\DelayedActionManager.cs" />
+    <Compile Include="Utilities\GameComponentTickManager.cs" />
+    <Compile Include="Utilities\Heal\AutoHealGameComponent .cs" />
     <Compile Include="YanYuSpecialEffect\HealWhenDamage\CompHealWhenDamage.cs" />
     <Compile Include="YanYuSpecialEffect\HealWhenDamage\CompProperties_HealWhenDamage.cs" />
   </ItemGroup>

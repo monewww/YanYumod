@@ -5,7 +5,7 @@ using System;
 using Verse;
 using System.Linq;
 
-namespace YanYu.Utilities
+namespace YanYu
 {
     [StaticConstructorOnStartup]
     public class GameComponentTickManager : GameComponent
@@ -35,7 +35,10 @@ namespace YanYu.Utilities
         public static void RegisterTickAction(Action act)
         {
             if (!tickActions.Contains(act))
+            {
                 tickActions.Add(act);
+                //Log.Message($"[GameComponentTickManager] Registered tick action. Total now: {tickActions.Count}");
+            }
         }
     }
     public static class DelayedActionManager
@@ -67,4 +70,54 @@ namespace YanYu.Utilities
             }
         }
     }
+    public static class PeriodicActionManager
+    {
+        private static List<(Action action, int interval, int nextTick)> actions;
+
+        static PeriodicActionManager()
+        {
+            Init();
+        }
+
+        private static void Init()
+        {
+            if (actions == null)
+            {
+                actions = new List<(Action action, int interval, int nextTick)>();
+                GameComponentTickManager.RegisterTickAction(Tick);
+            }
+        }
+
+        public static void Register(Action action, int interval)
+        {
+            Init();
+            int now = Find.TickManager.TicksGame;
+            actions.Add((action, interval, now + interval));
+        }
+
+        private static void Tick()
+        {
+            Init();
+            int now = Find.TickManager.TicksGame;
+
+            for (int i = actions.Count - 1; i >= 0; i--)
+            {
+                var (act, interval, nextTick) = actions[i];
+                if (now >= nextTick)
+                {
+                    try
+                    {
+                        act();
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Error($"[YanYu] PeriodicAction Error:\n{e}");
+                    }
+                    actions[i] = (act, interval, now + interval); // reset next tick
+                }
+            }
+        }
+    }
+
+
 }
