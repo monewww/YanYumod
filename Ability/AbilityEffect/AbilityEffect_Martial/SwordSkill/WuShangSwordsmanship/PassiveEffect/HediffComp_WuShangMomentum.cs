@@ -16,7 +16,7 @@ namespace YanYu
             if (Find.TickManager.TicksGame - lastAttackTick >= Props.ticksToDisappear)
             {
                 // 输出日志
-                Log.Message($"[舞殇剑势] {Pawn?.LabelShort ?? "？？？"} 的剑势已结束，移除被动效果。");
+                //Log.Message($"[舞殇剑势] {Pawn?.LabelShort ?? "？？？"} 的剑势已结束，移除被动效果。");
 
                 // 清除被动效果 Hediff
                 var passiveHediff = Pawn?.health?.hediffSet?.GetFirstHediffOfDef(

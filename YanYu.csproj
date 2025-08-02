@@ -66,8 +66,10 @@
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\WuShangSwordsmanship\SuperSkill\CompAbility_WuShangSwordsmanship_SuperSkill.cs" />
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\WuShangSwordsmanship\SuperSkill\CompProperties_WuShangSwordsmanship_SuperSkill.cs" />
     <Compile Include="HarmonyPatch\HarmonyInit.cs" />
+    <Compile Include="HarmonyPatch\MartialPatchs.cs" />
     <Compile Include="HarmonyPatch\YanYu_Patchs.cs" />
     <Compile Include="Utilities\DamageInfo\DamageInfoUtil.cs" />
+    <Compile Include="Utilities\DamageInfo\HealUtil.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttactEffectUtility.cs" />
     <Compile Include="YanYuPassiveEffect\PassiveEffectTrigger\HediffCompProperties_AttackTrigger.cs" />
     <Compile Include="YanYuPassiveEffect\PassiveEffectTrigger\HediffComp_AttackTrigger.cs" />
@@ -80,6 +82,8 @@
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttackUtility.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttactEffectPromptUtility.cs" />
     <Compile Include="Utilities\DelayedActionManager.cs" />
+    <Compile Include="YanYuSpecialEffect\HealWhenDamage\CompHealWhenDamage.cs" />
+    <Compile Include="YanYuSpecialEffect\HealWhenDamage\CompProperties_HealWhenDamage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\" />
