@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System;
 using Verse;
 using System.Linq;
+using RimWorld;
 
 namespace YanYu
 {
@@ -18,7 +19,7 @@ namespace YanYu
 
         public GameComponentTickManager(Game game) : base()
         {
-            if (!game.components.Any(c => c is GameComponentTickManager))
+            if (!game.components.Any(c => c.GetType() == typeof(GameComponentTickManager)))
             {
                 game.components.Add(this);
             }

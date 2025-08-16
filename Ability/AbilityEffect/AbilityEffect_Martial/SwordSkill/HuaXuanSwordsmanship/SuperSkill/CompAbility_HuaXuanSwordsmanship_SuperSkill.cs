@@ -14,6 +14,7 @@ namespace YanYu
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
+
             
         }
         public override void DrawEffectPreview(LocalTargetInfo target)

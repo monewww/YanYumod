@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using System.Collections.Generic;
 using Verse;
 
 namespace YanYu
@@ -6,7 +7,6 @@ namespace YanYu
     [DefOf]
     public static class YanYuFleckDefOf
     {
-
         public static FleckDef YanYu_MartialEffect_BasicSwordsmanship_fleck1;
         public static FleckDef YanYu_MartialEffect_BasicSwordsmanship_fleck2;
         public static FleckDef YanYu_MartialEffect_BasicSwordsmanship_fleck3;
@@ -36,4 +36,17 @@ namespace YanYu
         public static FleckDef YanYu_MartialEffect_WuShangSwordsmanship_fleck21;
         public static FleckDef YanYu_MartialEffect_WuShangSwordsmanship_fleck22;
     }
+    //[DefOf]
+    //public static class YanYu_FactionDefs
+    //{
+    //    public static Faction LingYueGong;
+    //}
+
+    [DefOf]
+    public static class YanYu_PawnDefOf
+    {
+        public static PawnKindDef YanYu_NPCNormal;
+        public static PawnKindDef YanYu_Leader;
+    }
+
 }
