@@ -25,8 +25,8 @@ namespace YanYu
         {
             if (pawn?.equipment?.Primary == null) return false;
 
-            string defName = pawn.equipment.Primary.def.defName.ToLower();
-            return defName.Contains(PropsSword.keyword);
+            string equipedWeapom = pawn.equipment.Primary.def.label;
+            return YanYu_Mod.settings.swordList.Contains(equipedWeapom);
         }
     }
 }

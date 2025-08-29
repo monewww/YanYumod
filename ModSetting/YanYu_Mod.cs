@@ -93,19 +93,18 @@ namespace YanYu
                 foreach (var weapon in allWeapons)
                 {
                     if (weapon == null) Log.Message("weapon is null");
-                    Log.Message($"{weapon.defName}");
-                    bool isSelected = currentList.Contains(weapon.defName);
+                    bool isSelected = currentList.Contains(weapon.label);
                     bool newSelected = isSelected;
-                    listing.CheckboxLabeled(weapon.defName, ref newSelected);
+                    listing.CheckboxLabeled(weapon.label, ref newSelected);
                     if (newSelected != isSelected)
                     {
                         if (newSelected)
                         {
-                            currentList.Add(weapon.defName);
+                            currentList.Add(weapon.label);
                         }
                         else
                         {
-                            currentList.Remove(weapon.defName);
+                            currentList.Remove(weapon.label);
                         }
                         settings.Write();
                     }
