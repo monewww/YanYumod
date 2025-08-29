@@ -64,8 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\CompAbilityEffect_SwordBase.cs" />
-    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\CompProperties_AbilitySwordBase.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\CompAbilityEffect_FistBase.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\CompProperties_AbilityFistBase.cs" />
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompAbility_BasicSwordsmanship_SuperSkill.cs" />
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompProperties_BasicSwordsmanship_SuperSkill.cs" />
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\CompAbilityEffect_SwordBase.cs" />
@@ -83,6 +83,8 @@
     <Compile Include="HarmonyPatch\YanYu_Patchs.cs" />
     <Compile Include="Job\GoAndTalkWithLeader.cs" />
     <Compile Include="Job\YanYu_JobDefOf.cs" />
+    <Compile Include="ModSetting\YanYu_Mod.cs" />
+    <Compile Include="ModSetting\YanYu_ModSettings.cs" />
     <Compile Include="Thing\ThingComp\ThingComp_Use\ThingComp_UseMedicine\ThingComp_HealBlood.cs" />
     <Compile Include="Thing\ThingComp\ThingComp_Use\ThingComp_UseMedicine\ThingCompProperties_HealBlood.cs" />
     <Compile Include="Utilities\DamageInfo\DamageInfoUtil.cs" />
