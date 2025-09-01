@@ -96,7 +96,6 @@
     <Compile Include="Utilities\Fastmove\GameComponent_FastMover .cs" />
     <Compile Include="Utilities\Heal\HealUtil.cs" />
     <Compile Include="Utilities\MapData\MapDataUtility.cs" />
-    <Compile Include="Utilities\EffectUtility\EffectUtility.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttactEffectUtility.cs" />
     <Compile Include="Utilities\ModExtention\QuestGiver.cs" />
     <Compile Include="YanYuPassiveEffect\PassiveEffectTrigger\HediffCompProperties_AttackTrigger.cs" />

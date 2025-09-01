@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.Noise;
-using YanYu.Utilities;
 
 namespace YanYu
 {
@@ -41,24 +40,49 @@ namespace YanYu
 
             GenSpawn.Spawn(mote, GetPawn.Position, GetPawn.Map);
 
+            Vector3 centerPos = (target.Cell.ToVector3Shifted() - GetPawn.Position.ToVector3Shifted()).normalized * 16f + GetPawn.Position.ToVector3Shifted();
+
+            DelayedActionManager.Register(() =>
+            {
+                Pawn attacker = GetPawn;
+                if (!attacker.Destroyed && attacker.Spawned)
+                {
+                    List<Thing> DelayignoredThings = new List<Thing> { attacker };
+                    foreach (Pawn mapPawn in attacker.Map.mapPawns.AllPawnsSpawned)
+                    {
+                        if (mapPawn.Faction == attacker.Faction)
+                            DelayignoredThings.Add(mapPawn);
+                    }
+
+                    AreaAttackUtility.DoEllipticalDamage(
+                        GetPawn,
+                        target,
+                        16f,
+                        3.8f,
+                        Props.damage,
+                        center: centerPos.ToIntVec3(),
+                        startAngle: 120f,
+                        endAngle: 240f,
+                        damageDef: DamageDefOf.Cut,
+                        ignoredThings: DelayignoredThings
+                    );
+                }
+            }, Find.TickManager.TicksGame+45);
+
         }
         public override void DrawEffectPreview(LocalTargetInfo target)
         {
             base.DrawEffectPreview(target);
-
+            Vector3 centerPos = (target.Cell.ToVector3Shifted()-GetPawn.Position.ToVector3Shifted()).normalized * 16f + GetPawn.Position.ToVector3Shifted();
             AreaAttactEffectPromptUtility.DrawEllipticalFieldEdges(
                 GetPawn,
                 target,
-                10,
-                5
-            );
-
-            AreaAttactEffectPromptUtility.DrawEllipticalFieldEdges(
-                GetPawn,
-                target,
-                20,
-                3,
-                color: Color.yellow
+                16f,
+                3.8f,
+                center: centerPos.ToIntVec3(),
+                startAngle: 120f,
+                endAngle: 240f,
+                color: Color.HSVToRGB(0f, 1f, 0.4f)
             );
         }
     }

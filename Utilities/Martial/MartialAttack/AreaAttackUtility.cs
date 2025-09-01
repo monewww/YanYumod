@@ -5,7 +5,7 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 
-namespace YanYu.Utilities
+namespace YanYu
 {
     public class AreaAttackUtility
     {
@@ -17,8 +17,9 @@ namespace YanYu.Utilities
             float radiusZ,
             float damageAmount,
             DamageDef damageDef = null,
-            bool selfCenter = true,
-            bool halfElliptical = true,
+            IntVec3 center = default(IntVec3),
+            float startAngle = 0f,
+            float endAngle = 360f,
             float armorPenetration = 1.0f,
             SoundDef hitSound = null,
             Thing instigator = null,
@@ -30,11 +31,9 @@ namespace YanYu.Utilities
                 damageDef = DamageDefOf.Cut;
             }
             Map map = attacker.Map;
-            Vector3 centerVec = selfCenter ? attacker.DrawPos : target.Cell.ToVector3Shifted();
-            IntVec3 center = centerVec.ToIntVec3();
 
             // 方向向量（XZ 平面单位向量）
-            Vector3 dir = (target.Cell.ToVector3Shifted() - attacker.DrawPos);
+            Vector3 dir = (target.Cell.ToVector3Shifted() - attacker.Position.ToVector3Shifted());
             dir.y = 0f; // 确保只在 XZ 平面上
             dir = dir.normalized;
             if (dir == Vector3.zero) dir = attacker.Rotation.FacingCell.ToVector3Shifted();
@@ -55,12 +54,13 @@ namespace YanYu.Utilities
                     if (!cell.InBounds(map)) continue;
 
                     // 将 cell → 本地坐标 (forward, right)
-                    Vector3 offset = (cell.ToVector3Shifted() - centerVec);
+                    Vector3 offset = (cell.ToVector3Shifted() - center.ToVector3Shifted());
+                    //角度判定
+                    float angleToTarget = Vector3.Angle(offset, dir);
+                    if (angleToTarget < startAngle  || angleToTarget > endAngle ) continue;
                     float localX = Vector3.Dot(offset, dir);   // 前后
                     float localZ = Vector3.Dot(offset, right); // 左右
 
-                    // 半椭圆：只取面向目标的半边
-                    if (halfElliptical && localX < 0) continue;
 
                     // 椭圆判定公式 (x/rx)^2 + (z/rz)^2 ≤ 1
                     if ((localX * localX) / (radiusX * radiusX) + (localZ * localZ) / (radiusZ * radiusZ) > 1f)

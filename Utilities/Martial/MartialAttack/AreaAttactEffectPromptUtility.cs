@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
-namespace YanYu.Utilities
+namespace YanYu
 {
     public class AreaAttactEffectPromptUtility
     {
@@ -14,7 +14,8 @@ namespace YanYu.Utilities
             float radiusX,
             float radiusZ,
             IntVec3 center = default(IntVec3),
-            bool halfElliptical = true,
+            float startAngle = 0f,
+            float endAngle = 360f,
             Color? color = null
         )
         {
@@ -41,11 +42,12 @@ namespace YanYu.Utilities
                         continue;
 
                     Vector3 offset = (cell.ToVector3Shifted() - centerVec);
+                    //角度判定
+                    float angleToTarget = Vector3.Angle(offset, dir);
+                    if (angleToTarget < startAngle || angleToTarget > endAngle) continue;
+
                     float localX = Vector3.Dot(offset, dir);
                     float localZ = Vector3.Dot(offset, right);
-
-                    if (halfElliptical && localX < 0)
-                        continue;
 
                     float ellipseValue = (localX * localX) / (radiusX * radiusX) + (localZ * localZ) / (radiusZ * radiusZ);
                     if (ellipseValue <= 1f)

@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using Verse.Noise;
-using YanYu.Utilities;
 
 namespace YanYu
 {

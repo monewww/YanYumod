@@ -2,7 +2,6 @@
 
 using UnityEngine;
 using Verse;
-using YanYu.Utilities;
 
 namespace YanYu
 {
@@ -37,7 +36,6 @@ namespace YanYu
                 4f,
                 0.7f,
                 center: target.Cell,
-                halfElliptical: false,
                 color: Color.HSVToRGB(0.61f, 0.7f, 0.9f)
             );
         }
