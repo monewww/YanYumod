@@ -35,6 +35,8 @@ namespace YanYu
         public static FleckDef YanYu_MartialEffect_WuShangSwordsmanship_fleck20;
         public static FleckDef YanYu_MartialEffect_WuShangSwordsmanship_fleck21;
         public static FleckDef YanYu_MartialEffect_WuShangSwordsmanship_fleck22;
+
+        public static FleckDef YanYu_MartialEffect_BasicFistTechnique_fleck1;
     }
     //[DefOf]
     //public static class YanYu_FactionDefs

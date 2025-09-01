@@ -13,7 +13,7 @@ namespace YanYu
         {
             if (!PawnHasSword(parent.pawn))
             {
-                reason = "MustEquipSword".Translate();
+                reason = "MustEquipGloves".Translate();
                 return true;
             }
 

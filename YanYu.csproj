@@ -64,6 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\BasicFistTechnique\SuperSkill\CompAbility_BasicFistTechnique_SuperSkill.cs" />
+    <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\BasicFistTechnique\SuperSkill\CompProperties_BasicFistTechnique_SuperSkill.cs" />
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\CompAbilityEffect_FistBase.cs" />
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\CompProperties_AbilityFistBase.cs" />
     <Compile Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\BasicSwordsmanship\SuperSkill\CompAbility_BasicSwordsmanship_SuperSkill.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Utilities\Fastmove\GameComponent_FastMover .cs" />
     <Compile Include="Utilities\Heal\HealUtil.cs" />
     <Compile Include="Utilities\MapData\MapDataUtility.cs" />
+    <Compile Include="Utilities\EffectUtility\EffectUtility.cs" />
     <Compile Include="Utilities\Martial\MartialAttack\AreaAttactEffectUtility.cs" />
     <Compile Include="Utilities\ModExtention\QuestGiver.cs" />
     <Compile Include="YanYuPassiveEffect\PassiveEffectTrigger\HediffCompProperties_AttackTrigger.cs" />
@@ -112,7 +115,6 @@
     <Compile Include="YanYuSpecialEffect\HealWhenDamage\CompProperties_HealWhenDamage.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\FistSkill\BasicFistTechnique\" />
     <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\SaberSkill\" />
     <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\StaffSkill\" />
     <Folder Include="Ability\AbilityEffect\AbilityEffect_Martial\SwordSkill\HuaXuanSwordsmanship\PasiiveEffect\" />

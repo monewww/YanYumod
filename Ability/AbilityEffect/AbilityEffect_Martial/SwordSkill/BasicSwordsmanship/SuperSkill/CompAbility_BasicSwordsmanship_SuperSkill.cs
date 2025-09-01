@@ -14,6 +14,7 @@ namespace YanYu
         public Pawn GetPawn => this.parent.pawn;
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
+            base.Apply(target, dest);
             List<IntVec3> explosedPosition = new List<IntVec3>();
             var damagedPawns = new HashSet<Pawn>();
             var tickToCombo = Find.TickManager.TicksGame + 60;
