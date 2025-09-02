@@ -10,7 +10,7 @@ namespace YanYu
     {
         public static void DrawEllipticalFieldEdges(
             Pawn attacker,
-            LocalTargetInfo target,
+            IntVec3 target,
             float radiusX,
             float radiusZ,
             IntVec3 center = default(IntVec3),
@@ -21,7 +21,7 @@ namespace YanYu
         {
             var map = attacker.Map;
             Vector3 centerVec = center == default(IntVec3) ? attacker.Position.ToVector3Shifted() : center.ToVector3Shifted();
-            Vector3 dir = (target.Cell.ToVector3Shifted() - attacker.Position.ToVector3Shifted());
+            Vector3 dir = (target.ToVector3Shifted() - attacker.Position.ToVector3Shifted());
             dir.y = 0f; // 确保只在 XZ 平面上
             dir.Normalize(); // 转换为单位向量
             if (dir == Vector3.zero) dir = attacker.Rotation.FacingCell.ToVector3Shifted();
@@ -44,7 +44,8 @@ namespace YanYu
                     Vector3 offset = (cell.ToVector3Shifted() - centerVec);
                     //角度判定
                     float angleToTarget = Vector3.Angle(offset, dir);
-                    if (angleToTarget < startAngle || angleToTarget > endAngle) continue;
+                    if (startAngle>0 && (angleToTarget < startAngle || angleToTarget > endAngle)) continue;
+                    if (startAngle<0 && (angleToTarget < 360+startAngle && angleToTarget > endAngle)) continue;
 
                     float localX = Vector3.Dot(offset, dir);
                     float localZ = Vector3.Dot(offset, right);
@@ -57,11 +58,9 @@ namespace YanYu
                 }
             }
 
-            // 用红色或传入颜色画边缘
             GenDraw.DrawFieldEdges(cellsInEllipse, color ?? Color.red);
         }
 
-        //类比DoCircleDamage
         public static void DrawCircleFeildEdge(
             Pawn attacker,
             LocalTargetInfo target,
@@ -96,7 +95,6 @@ namespace YanYu
                     }
                 }
             }
-            // 用红色或传入颜色画边缘
             GenDraw.DrawFieldEdges(cellsInCircle, color ?? Color.red);
         }
 
@@ -139,7 +137,6 @@ namespace YanYu
                     }
                 }
             }
-            // 用红色或传入颜色画边缘
             GenDraw.DrawFieldEdges(cellsInDiamond, color ?? Color.red);
 
         }

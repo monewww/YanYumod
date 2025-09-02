@@ -32,7 +32,7 @@ namespace YanYu
 
             AreaAttactEffectPromptUtility.DrawEllipticalFieldEdges(
                 GetPawn,
-                target,
+                target.Cell,
                 4f,
                 0.7f,
                 center: target.Cell,

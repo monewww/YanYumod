@@ -20,7 +20,7 @@ namespace YanYu
                 new CurvePoint(0.35f, 30f),
                 new CurvePoint(0.4f, 450f),   
                 new CurvePoint(0.45f, 0f),
-                new CurvePoint(0.75f, -220f),
+                new CurvePoint(0.75f, -200f),
                 new CurvePoint(0.750001f, 0f),
             };
 
@@ -63,7 +63,7 @@ namespace YanYu
                         center: centerPos.ToIntVec3(),
                         startAngle: 120f,
                         endAngle: 240f,
-                        damageDef: DamageDefOf.Cut,
+                        damageDef: DamageDefOf.Blunt,
                         ignoredThings: DelayignoredThings
                     );
                 }
@@ -76,7 +76,7 @@ namespace YanYu
             Vector3 centerPos = (target.Cell.ToVector3Shifted()-GetPawn.Position.ToVector3Shifted()).normalized * 16f + GetPawn.Position.ToVector3Shifted();
             AreaAttactEffectPromptUtility.DrawEllipticalFieldEdges(
                 GetPawn,
-                target,
+                target.Cell,
                 16f,
                 3.8f,
                 center: centerPos.ToIntVec3(),

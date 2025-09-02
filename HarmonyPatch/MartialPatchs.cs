@@ -13,9 +13,8 @@ namespace YanYu
         {
             //Log.Message($"Institator: {dinfo.Instigator?.LabelShort}, Target: {pawn.LabelShort}");
             if (!(dinfo.Instigator is Pawn attacker)) return;
-            //总觉得所有pawn都要检测的话太消耗资源，只管同派系的吧
-            if (attacker.Faction != Faction.OfPlayer) return;
-            //Log.Message("going on");
+            //只有人类和yanyu_NPC能使用
+            if (attacker.RaceProps == null || !(attacker.RaceProps.Humanlike || attacker.def.defName=="YanYu_NPC")) return;
             float healRatio = attacker.GetStatValue(StatDef.Named("HealOnDamage"), true);
             if (healRatio > 0f)
             {

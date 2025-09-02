@@ -42,7 +42,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck1, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -53,7 +53,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck2, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -64,7 +64,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck3, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -88,7 +88,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck4, scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
@@ -99,7 +99,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck5, scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
@@ -110,7 +110,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck6, scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
@@ -121,7 +121,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck7, scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
@@ -132,7 +132,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck8, scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
@@ -170,7 +170,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck9, scale),
                     rotationAngle: 0f,
                     offsetRight: -1f,
@@ -181,7 +181,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck10, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -192,7 +192,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck11, scale),
                     rotationAngle: 0f,
                     offsetRight: -2f,
@@ -203,7 +203,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck12, scale),
                     rotationAngle: 0f,
                     offsetRight: -2f,
@@ -214,7 +214,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck13, scale),
                     rotationAngle: 0f,
                     offsetRight: -2f,
@@ -225,7 +225,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck14, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -236,7 +236,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck15, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -247,7 +247,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck16, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -293,7 +293,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck19, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -304,7 +304,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck20, scale),
                     rotationAngle: 0f,
                     offsetRight: 0.3f,
@@ -315,7 +315,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck21, scale),
                     rotationAngle: 0f,
                     offsetRight: -1f,
@@ -326,7 +326,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_WuShangSwordsmanship_fleck22, scale),
                     rotationAngle: 0f,
                     offsetRight: -0.5f,

@@ -11,14 +11,14 @@ namespace YanYu
     {
         public static void DoEffect(
             Pawn attacker,
-            LocalTargetInfo target,
+            IntVec3 target,
             FleckCreationData fleckData,
             float rotationAngle = 0f,   
             float offsetRight = 0f,
             float offsetForward = 0f
         )
         {
-            IntVec3 dir = (target.Cell - attacker.Position);
+            IntVec3 dir = (target - attacker.Position);
             dir.y = 0;
             float baseAngle = dir.ToVector3Shifted().AngleFlat();
             float angleRad = baseAngle * Mathf.Deg2Rad;
@@ -42,7 +42,6 @@ namespace YanYu
             private Vector3 direction;
             private float currentSpeed;
             private SimpleCurve acceleration;
-            private float rotationAcceleration;
             private Vector3 scaleRate;
             private float duration;
             private float elapsedTime;
@@ -97,8 +96,6 @@ namespace YanYu
                     curvedScale = curvedScale + scaleRate;
                 }
 
-                // --- 旋转更新 ---
-                rotationRate += rotationAcceleration * deltaTime;
                 exactRotation += rotationRate * deltaTime;
             }
         }

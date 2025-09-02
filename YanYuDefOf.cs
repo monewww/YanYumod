@@ -37,6 +37,9 @@ namespace YanYu
         public static FleckDef YanYu_MartialEffect_WuShangSwordsmanship_fleck22;
 
         public static FleckDef YanYu_MartialEffect_BasicFistTechnique_fleck1;
+
+        public static FleckDef YanYu_MartialEffect_PianHuaQiXingQuan_fleck1;
+        public static FleckDef YanYu_MartialEffect_PianHuaQiXingQuan_fleck2;
     }
     //[DefOf]
     //public static class YanYu_FactionDefs

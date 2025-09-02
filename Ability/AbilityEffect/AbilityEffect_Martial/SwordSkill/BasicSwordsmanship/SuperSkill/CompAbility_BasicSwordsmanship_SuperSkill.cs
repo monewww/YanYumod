@@ -43,7 +43,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck1,scale),
                     rotationAngle: 0f,
                     offsetRight: 2f,
@@ -55,7 +55,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2, scale),
                     rotationAngle: 0f,
                     offsetRight: 0f,
@@ -66,7 +66,7 @@ namespace YanYu
             DelayedActionManager.Register(() =>
                 AreaAttactEffectUtility.DoEffect(
                     GetPawn,
-                    target,
+                    target.Cell,
                     FleckMaker.GetDataStatic(GetPawn.Position.ToVector3Shifted(), GetPawn.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck3, scale),
                     rotationAngle: 0f,
                     offsetRight: -2.8f,
@@ -77,7 +77,7 @@ namespace YanYu
 
             AreaAttackUtility.DoEllipticalDamage(
                 GetPawn,
-                target,
+                target.Cell,
                 10,
                 5,
                 Props.damage,
@@ -111,7 +111,7 @@ namespace YanYu
                         DelayedActionManager.Register(() =>
                             AreaAttactEffectUtility.DoEffect(
                                 attacker,
-                                target,
+                                target.Cell,
                                 FleckMaker.GetDataStatic(attacker.Position.ToVector3Shifted(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_1, scale),
                                 rotationAngle: 0f,
                                 offsetRight: 0f,
@@ -122,7 +122,7 @@ namespace YanYu
                         DelayedActionManager.Register(() =>
                             AreaAttactEffectUtility.DoEffect(
                                 attacker,
-                                target,
+                                target.Cell,
                                 FleckMaker.GetDataStatic(attacker.Position.ToVector3Shifted(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_2, scale),
                                 rotationAngle: 0f,
                                 offsetRight: 2f,
@@ -133,7 +133,7 @@ namespace YanYu
                         DelayedActionManager.Register(() =>
                             AreaAttactEffectUtility.DoEffect(
                                 attacker,
-                                target,
+                                target.Cell,
                                 FleckMaker.GetDataStatic(attacker.Position.ToVector3Shifted(), attacker.Map, YanYuFleckDefOf.YanYu_MartialEffect_BasicSwordsmanship_fleck2_3, scale),
                                 rotationAngle: 0f,
                                 offsetRight: 2f,
@@ -144,7 +144,7 @@ namespace YanYu
                         //二段伤害
                         AreaAttackUtility.DoEllipticalDamage(
                             attacker,
-                            target,
+                            target.Cell,
                             20,
                             3,
                             Props.damage,
@@ -162,16 +162,20 @@ namespace YanYu
 
             AreaAttactEffectPromptUtility.DrawEllipticalFieldEdges(
                 GetPawn,
-                target,
+                target.Cell,
                 10,
-                5
+                5,
+                startAngle:-90f,
+                endAngle:90f
             );
 
             AreaAttactEffectPromptUtility.DrawEllipticalFieldEdges(
                 GetPawn,
-                target,
+                target.Cell,
                 20,
                 3,
+                startAngle:-90f,
+                endAngle:90f,
                 color: Color.yellow
             );
         }
