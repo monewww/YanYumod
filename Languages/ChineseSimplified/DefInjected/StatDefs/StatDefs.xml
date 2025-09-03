@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <HealOnDamage.label>吸血</HealOnDamage.label>
+    <HealOnDamage.description>基于伤害的百分比治疗自己</HealOnDamage.description>
+    <AutoHealPerSecond.label>自回血</AutoHealPerSecond.label>
+    <AutoHealPerSecond.description>每秒恢复一定生命值</AutoHealPerSecond.description>
+
+
+</LanguageData>

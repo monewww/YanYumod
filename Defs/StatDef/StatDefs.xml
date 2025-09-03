@@ -12,7 +12,7 @@
     <StatDef>
         <defName>AutoHealPerSecond</defName>
         <label>auto heal</label>
-        <description>Pawn passively heals this amount of HP per second (60 ticks).</description>
+        <description>Pawn passively heals this amount of HP per second.</description>
         <category>PawnCombat</category>
         <defaultBaseValue>0</defaultBaseValue>
         <toStringStyle>FloatTwo</toStringStyle>

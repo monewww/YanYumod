@@ -3,7 +3,7 @@
         <defName>NamerSettlementLingYueGong</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_name->Ling Yue Palace</li>
+                <li>r_name->[LingYuePalace]</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -12,7 +12,7 @@
         <defName>NamerFactionLingYueGong</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_name->Ling Yue Palace</li>
+                <li>r_name->[LingYuePalace]</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>
@@ -48,7 +48,7 @@
         <defName>YanYu_NamerLeader_LingYueGong</defName>
         <rulePack>
             <rulesStrings>
-                <li>r_leaderTitle->Master</li>
+                <li>r_leaderTitle->[Master]</li>
             </rulesStrings>
         </rulePack>
     </RulePackDef>

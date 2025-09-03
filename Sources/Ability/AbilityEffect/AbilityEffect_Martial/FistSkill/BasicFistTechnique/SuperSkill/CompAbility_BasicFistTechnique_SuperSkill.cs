@@ -22,7 +22,12 @@ namespace YanYu
                 new CurvePoint(0.45f, 0f),
                 new CurvePoint(0.75f, -200f),
                 new CurvePoint(0.750001f, 0f),
-            };
+            }; 
+            MoteMaker.ThrowText(
+                GetPawn.DrawPos + new Vector3(0, 0, 1f),
+                map: GetPawn.Map,
+                text: "CrimsonPhoenixGreetingtheSun".Translate()
+            );
 
             float start_rot = (target.Cell - GetPawn.Position).AngleFlat;
             var mote = (MoteUtil.Mote_MoveGrow)ThingMaker.MakeThing(ThingDef.Named("YanYu_Mote_BasicFistTechnique_MoveGrow"));

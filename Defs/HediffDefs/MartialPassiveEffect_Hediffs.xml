@@ -10,7 +10,6 @@
         <defName>YanYu_MartialPassiveEffect_WuShangMomentum</defName>
         <label>WuShangMomentum</label>
         <description>The sword moves like a dance beneath the moonlight, each strike layering power upon the last.</description>
-        <!-- 挥剑犹如月下起舞，威力重重叠加 -->
         <defaultLabelColor>(1.0, 0.713, 0.756)</defaultLabelColor>
         <isBad>false</isBad>
         <alwaysShowSeverity>true</alwaysShowSeverity>
@@ -22,7 +21,7 @@
     <HediffDef ParentName="YanYu_MartialPassiveHediffBase">
         <defName>YanYu_MartialPassiveEffect_PianHuaFistPower</defName>
         <label>PianHua Fist Power</label>
-        <description>TODO</description>
+        <description>Each layer of fist power fortifies both offense and defense, until the right moment arrives—when it blossoms into a golden leaf of the Dharma, striking awe into the hearts of foes.</description>
         <defaultLabelColor>(0.32, 0.67, 0.39)</defaultLabelColor>
         <isBad>false</isBad>
         <alwaysShowSeverity>true</alwaysShowSeverity>

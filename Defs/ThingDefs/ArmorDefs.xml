@@ -90,7 +90,6 @@
         <description>Once a sacred treasure of the Zhe tribe, this armor is made from silk refined
             from crushed Fire Essence Stones. It is remarkably light yet possesses the strength of
             stone. Offers resistance to intense flames and soothes inner turmoil.</description>
-        <!-- 此甲本是那遮部落的宝物，如今流落江湖。将火精石挫之取丝，经过复杂的工序制成甲身。质地轻便却坚韧，有磐石之固。更可阻烈火，除心火 -->
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/GoldenCicadaTreasureRobe/GoldenCicadaTreasureRobe</texPath>
         </graphicData>
@@ -125,8 +124,8 @@
 
     <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_FeiYuJingYi">
         <defName>YanYu_FeiYuJingYi</defName>
-        <label>fei yu jing yi</label>
-        <description>Official uniform of the Six Gates Bureau</description>
+        <label>Flying Fish Robe</label>
+        <description>Flying Fish Robe, brocaded with fish leaping through waves. Its shimmering silk marks the authority of Six Gates, a robe of honor and prestige.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/FeiYuJingYi/FeiYuJingYi</texPath>
         </graphicData>
@@ -167,8 +166,8 @@
 
     <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_NieYingFu">
         <defName>YanYu_NieYingFu</defName>
-        <label>Nie ying fu</label>
-        <description>Exclusive robe of the Soulbinding Pavilion</description>
+        <label>Shadow Garb</label>
+        <description>Shadow Garb, woven for silent killers of the Soulbinding Pavilion. Its dark patterns flow like phantoms, cloaking the wearer in silence and hidden death.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/NieYingFu/NieYingFu</texPath>
         </graphicData>
@@ -221,8 +220,8 @@
     奇人庄专属衣物：Strange Folk Manor Exclusive Outfit -->
     <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_YouLongYunShan">
         <defName>YanYu_YouLongYunShan</defName>
-        <label>You Long Yun Shan</label>
-        <description>Bagua Sect Exclusive Outfit</description>
+        <label>Dragoncloud Robe</label>
+        <description>The Dragoncloud Robe, as light as drifting clouds and as graceful as a soaring dragon, crafted by the masters of the Eight Trigrams Sect.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/YouLongYunShan/YouLongYunShan</texPath>
         </graphicData>
@@ -266,8 +265,8 @@
 
     <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_YuXianPao">
         <defName>YanYu_YuXianPao</defName>
-        <label>Yu Xian Pao</label>
-        <description>Peach Blossom Dock Exclusive Outfit</description>
+        <label>The Robe of Immortal Encounter</label>
+        <description>The Robe of Immortal Encounter, woven in the hidden Peach Blossom Retreat, blooms with drifting petals, as if meeting an immortal in a dream.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/YuXianPao/YuXianPao</texPath>
         </graphicData>
@@ -310,8 +309,8 @@
 
     <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_DiaoQiu">
         <defName>YanYu_DiaoQiu</defName>
-        <label>Diao Qiu</label>
-        <description>Empty Abyss Valley Exclusive Outfit</description>
+        <label>The Mink Fur Cloak</label>
+        <description>The Mink Fur Cloak, crafted in the desolate Hollow Ravine, exudes both luxury and chill, embodying a spirit of aloofness and frostbound pride.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/DiaoQiu/DiaoQiu</texPath>
         </graphicData>
@@ -354,8 +353,8 @@
 
     <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_QinNiaoGeLang">
         <defName>YanYu_QinNiaoGeLang</defName>
-        <label>Qin Niao Ge Lang</label>
-        <description>Returning Cloud Island Exclusive Outfit</description>
+        <label>Azure Bird Song over Waves</label>
+        <description>Azure Bird Song over Waves, a garment from Cloudreturn Isle, flows like the rising tides and shimmers like a bluebird in flight—graceful, unrestrained, and in harmony with the vast sea and sky.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/QinNiaoGeLang/QinNiaoGeLang</texPath>
         </graphicData>
@@ -398,8 +397,8 @@
 
     <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_HuangBuSengYi">
         <defName>YanYu_HuangBuSengYi</defName>
-        <label>Huang Bu Seng Yi</label>
-        <description>the Huang Bu Seng Yi</description>
+        <label>Yellow Monk Robe</label>
+        <description>a plain yellow cloth garment, commonly worn by the warrior monks of Shaolin Temple.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Armors/HuangBuSengYi/HuangBuSengYi</texPath>
             <graphicClass>Graphic_Single</graphicClass>

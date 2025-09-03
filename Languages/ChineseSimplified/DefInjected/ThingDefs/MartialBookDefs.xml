@@ -1,5 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
     <YanYu_Martial_BasicSwordsmanship.label>基础剑法</YanYu_Martial_BasicSwordsmanship.label>
     <YanYu_Martial_BasicSwordsmanship.description>一本记载了如何修炼基础剑法的小册子</YanYu_Martial_BasicSwordsmanship.description>
-    
+    <YanYu_Martial_WuShangSwordsmanship.label>舞殇剑诀</YanYu_Martial_WuShangSwordsmanship.label>
+    <YanYu_Martial_WuShangSwordsmanship.description>一本记载了如何修炼舞殇剑诀的秘辛</YanYu_Martial_WuShangSwordsmanship.description>
+    <YanYu_Martial_BasicFistTechnique.label>基础拳法</YanYu_Martial_BasicFistTechnique.label>
+    <YanYu_Martial_BasicFistTechnique.description>一本记载了如何修炼基础拳法的小册子</YanYu_Martial_BasicFistTechnique.description>
+    <YanYu_Martial_PianHuaQiXingQuan.label>偏花七星拳</YanYu_Martial_PianHuaQiXingQuan.label>
+    <YanYu_Martial_PianHuaQiXingQuan.description>一本记载了如何修炼偏花七星拳的典籍</YanYu_Martial_PianHuaQiXingQuan.description>
+
 </LanguageData>

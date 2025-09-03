@@ -2,6 +2,7 @@
     <RecipeDef>
         <defName>MakeHemostaticPowder</defName>
         <label>Make Hemostatic Powder</label>
+        <description>一种止血药物，能够迅速止住伤口出血。</description>
         <jobString>Making Hemostatic Powder...</jobString>
         <workAmount>300</workAmount>
         <effectWorking>ConstructMetal</effectWorking>

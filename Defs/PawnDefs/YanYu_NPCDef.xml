@@ -3,7 +3,7 @@
   <ThingDef Name="YanYu_NPC" ParentName="BasePawn">
     <defName>YanYu_NPC</defName>
     <label>YanYu_NPC</label>
-    <description>NPC in YanYu World</description>
+    <description>These people roam the martial world, having honed their skills in the arts of combat.</description>
     <statBases>
       <MarketValue>1750</MarketValue>
       <MoveSpeed>4.6</MoveSpeed>

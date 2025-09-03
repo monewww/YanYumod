@@ -114,7 +114,7 @@ namespace YanYu
             listing.End();
             Widgets.EndScrollView();
 
-            if (Widgets.ButtonText(new Rect(inRect.x, inRect.yMax - 35f, 100f, 30f), "close".Translate()))
+            if (Widgets.ButtonText(new Rect(inRect.x, inRect.yMax - 35f, 100f, 30f), "Close".Translate()))
             {
                 Close();
             }

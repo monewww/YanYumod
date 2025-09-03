@@ -4,4 +4,10 @@
     <YanYu_Martial_BasicSwordsmanship_SuperSkill.description>招式虚虚实实让对手无法防范,造成伤害后有70%造成二段伤害</YanYu_Martial_BasicSwordsmanship_SuperSkill.description>
     <YanYu_Martial_WuShangSwordsmanship_SuperSkill.label>舞殇剑法</YanYu_Martial_WuShangSwordsmanship_SuperSkill.label>
     <YanYu_Martial_WuShangSwordsmanship_SuperSkill.description>以绝情之势挥出长剑,对敌人造成伤害,随后造成二段伤害</YanYu_Martial_WuShangSwordsmanship_SuperSkill.description>
+
+    <YanYu_Martial_BasicFistTechnique_SuperSkill.label>基础拳法</YanYu_Martial_BasicFistTechnique_SuperSkill.label>
+    <YanYu_Martial_BasicFistTechnique_SuperSkill.description>基础拳法历来是初入江湖的侠士们都会修炼的一套入门徒手功夫，该拳法虽威力不强，但胜在招式简单易学，毫不花哨。</YanYu_Martial_BasicFistTechnique_SuperSkill.description>
+    <YanYu_Martial_BasicFistTechnique_SuperSkill.label>偏花七星拳</YanYu_Martial_BasicFistTechnique_SuperSkill.label>
+    <YanYu_Martial_BasicFistTechnique_SuperSkill.description>偏花七星拳是少林罗汉堂的上乘武学,其出招迅捷,善于在同一点上瞬间打击多次叠加伤害,出招后可获得一层偏花拳劲,拥有x层拳劲时有0.4+0.2x概率变招，并消耗拳劲增强招式伤害</YanYu_Martial_BasicFistTechnique_SuperSkill.description>
+
 </LanguageData>

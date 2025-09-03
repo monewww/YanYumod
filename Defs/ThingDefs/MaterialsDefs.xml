@@ -2,10 +2,7 @@
     <ThingDef Name="YanYu_KunWuStone" ParentName="ResourceBase">
         <defName>YanYu_KunWuStone</defName>
         <label>Kun Wu Stone</label>
-        <description>This is a piece of Kunwu Stone, said to originate from Liuzhou — one of the
-            legendary Ten Continents and Three Islands. It serves as a fundamental material for
-            forging weapons and rings.</description>
-        <!-- 这是一块昆吾石，据说产自传说中十洲三岛中的流洲，是用来打造武器、戒指的基本材料。 -->
+        <description>This is a piece of Kunwu Stone, said to originate from Liuzhou — one of the legendary Ten Continents and Three Islands. It serves as a fundamental material for forging weapons and rings.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Materials/KunWuStone</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -38,11 +35,9 @@
     <ThingDef Name="YanYu_ZiJin" ParentName="ResourceBase">
         <defName>YanYu_ZiJin</defName>
         <label>Zi Jin</label>
-        <description>This is a piece of purple-gold ore, shimmering with a violet sheen.
-It is an extremely rare mineral, used as a fundamental material for forging weapons, rings, and pendants.</description>
-        <!-- 这是一块紫金矿石，闪烁着紫罗兰色的光泽。它是一种极为稀有的矿物，用作打造武器、戒指和吊坠的基本材料。 -->
+        <description>This is a piece of purple-gold ore, shimmering with a violet sheen. It is an extremely rare mineral, used as a fundamental material for forging weapons, rings, and pendants.</description>
         <graphicData>
-            <texPath>YanYu_item/YanYu_Materials/KunWuStone</texPath>
+            <texPath>YanYu_item/YanYu_Materials/ZiJin</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <stackLimit>60</stackLimit>

@@ -79,7 +79,7 @@
   <AbilityDef ParentName="YanYu_SuperSkillBase">
     <defName>YanYu_Martial_BasicFistTechnique_SuperSkill</defName>
     <label>Basic Fist Technique Martial</label>
-    <description>The move feints unpredictably, making it impossible for the opponent to guard against. After dealing damage, there is a 70% chance to inflict a second hit.</description>
+    <description>The Basic Fist Technique has long been a fundamental unarmed skill practiced by young martial artists upon entering the jianghu. Though not particularly powerful, it is valued for its simplicity, ease of learning, and lack of unnecessary flourishes.</description>
     <iconPath>YanYu_ability/YanYu_martial/BasicFistTechnique_Skill</iconPath>
     <cooldownTicksRange>2100</cooldownTicksRange>
     <verbProperties>
@@ -101,7 +101,7 @@
   <AbilityDef ParentName="YanYu_SuperSkillBase">
     <defName>YanYu_Martial_PianHuaQiXingQuan_SuperSkill</defName>
     <label>PianHua QiXing Quan Martial</label>
-    <description>The move feints unpredictably, making it impossible for the opponent to guard against. After dealing damage, there is a 70% chance to inflict a second hit.</description>
+    <description>The Pianhua Seven-Star Fist is an advanced martial art of the Shaolin Arhat Hall. Its strikes are swift, specializing in delivering multiple blows to the same point in rapid succession to stack damage. Each strike grants one stack of Pianhua Fist Energy. At x stacks, there is a (0.4 + 0.2x) chance to trigger a variation move, consuming the energy to enhance the skill's damage.</description>
     <iconPath>YanYu_ability/YanYu_martial/PianHuaQiXingQuan_Skill</iconPath>
     <cooldownTicksRange>2100</cooldownTicksRange>
     <verbProperties>

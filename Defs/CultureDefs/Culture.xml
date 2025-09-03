@@ -41,7 +41,7 @@
     <CultureDef ParentName="YanYu_TraditionCulture">
         <defName>YanYu_LingYueGongCulture</defName>
         <label>Ling Yue Gong culture</label>
-        <description>The culture of the Ling Yue Palace.</description>
+        <description>YanYu_LingYueGongCultureTODO</description>
         <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">YanYu_NamerLeader_LingYueGong</leaderTitleMaker>
         <pawnNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerPersonLingYueGong</pawnNameMaker>
         <iconPath>YanYu_icon/FactionIcon/LingYueGong_icon</iconPath>

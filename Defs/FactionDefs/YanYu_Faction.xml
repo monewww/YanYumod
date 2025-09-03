@@ -194,6 +194,7 @@
 
     <FactionDef ParentName="YanYu_FactionBase">
         <defName>YanYu_LingYueGong</defName>
+        <label>Lingyue Palace</label>
         <description>In the martial world, there is only one sect that accepts women exclusively — the Lingyue Palace. It is renowned for its two martial arts disciplines: swordsmanship and palm techniques. According to legend, the founder of Lingyue Palace was once a disciple of Emei. After committing a grave offense, she was expelled from the sect. Upon reaching Mingyue Mountain, she beheld the bright, clear moon atop its peak and was suddenly struck by inspiration. She created the Shadow Moon Divine Art on the spot and founded Lingyue Palace there, welcoming women from across the land to train in martial arts.Their techniques are light and ethereal, seemingly soft and powerless, yet in truth as swift and fierce as a tiger — a balanced cultivation of both inner and outer strength, delivering formidable power.</description>
         <factionNameMaker>NamerFactionLingYueGong</factionNameMaker>
         <settlementNameMaker>NamerSettlementLingYueGong</settlementNameMaker>

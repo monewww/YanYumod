@@ -36,7 +36,7 @@ namespace YanYu
                 MoteMaker.ThrowText(
                     GetPawn.DrawPos + new Vector3(0, 0, 0.5f),
                     map: GetPawn.Map,
-                    text: "Seizing the Mountain, Leaping the Ocean".Translate()
+                    text: "SeizingtheMountain".Translate()
                 );
                 foreach (float angle in angles)
                 {
@@ -86,7 +86,7 @@ namespace YanYu
                 MoteMaker.ThrowText(
                     GetPawn.DrawPos + new Vector3(0, 0, 1f),
                     map: GetPawn.Map,
-                    text: "Seven Stars Convergence".Translate()
+                    text: "SevenStarsConvergence".Translate()
                 );
                 if (!GetPawn.Destroyed && GetPawn.Spawned)
                 {

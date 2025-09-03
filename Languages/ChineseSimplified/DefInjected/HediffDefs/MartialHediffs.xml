@@ -1,5 +1,11 @@
 <LanguageData>
     <YanYu_MartialHediff_BasicSwordsmanship.label>基础剑法</YanYu_MartialHediff_BasicSwordsmanship.label>
     <YanYu_MartialHediff_BasicSwordsmanship.description>此人已经学习了基础剑法</YanYu_MartialHediff_BasicSwordsmanship.description>
-    
+    <YanYu_MartialHediff_WuShangSwordsmanship.label>舞殇剑诀</YanYu_MartialHediff_WuShangSwordsmanship.label>
+    <YanYu_MartialHediff_WuShangSwordsmanship.description>此人已经学习了舞殇剑诀</YanYu_MartialHediff_WuShangSwordsmanship.description>
+
+    <YanYu_MartialHediff_BasicFistTechnique.label>基础拳法</YanYu_MartialHediff_BasicFistTechnique.label>
+    <YanYu_MartialHediff_BasicFistTechnique.description>此人已经学习了基础拳法</YanYu_MartialHediff_BasicFistTechnique.description>
+    <YanYu_MartialHediff_PianHuaQiXingQuan.label>偏花七星拳</YanYu_MartialHediff_PianHuaQiXingQuan.label>
+    <YanYu_MartialHediff_PianHuaQiXingQuan.description>此人已经学习了偏花七星拳</YanYu_MartialHediff_PianHuaQiXingQuan.description>
 </LanguageData>

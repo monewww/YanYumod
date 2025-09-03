@@ -20,7 +20,7 @@
     <ThingDef ParentName="YanYu_WeaponBlueprintBase">
         <defName>YanYu_WuShangLongSwordBlueprint</defName>
         <label>Wu Shang Long Sword Blueprint</label>
-        <description>A blueprint for the Wu Shang Long Sword, a weapon known for its elegance and sharpness.</description>
+        <description>A blueprint for the Wu Shang Long Sword</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
         </graphicData>
@@ -32,7 +32,7 @@
     <ThingDef ParentName="YanYu_WeaponBlueprintBase">
         <defName>YanYu_HeiLongSwordBlueprint</defName>
         <label>Hei Long Sword Blueprint</label>
-        <description>A blueprint for the Hei Long Sword, a weapon known for its power and durability.</description>
+        <description>A blueprint for the Hei Long Sword</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
         </graphicData>
@@ -44,7 +44,7 @@
     <ThingDef ParentName="YanYu_WeaponBlueprintBase">
         <defName>YanYu_YaJiuSwordBlueprint</defName>
         <label>Ya Jiu Sword Blueprint</label>
-        <description>A blueprint for the Ya Jiu Sword, a weapon known for its agility and precision.</description>
+        <description>A blueprint for the Ya Jiu Sword</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
         </graphicData>
@@ -56,7 +56,7 @@
     <ThingDef ParentName="YanYu_WeaponBlueprintBase">
         <defName>YanYu_ZiYangSwordBlueprint</defName>
         <label>Zi Yang Sword Blueprint</label>
-        <description>A blueprint for the Zi Yang Sword, a weapon known for its balance and versatility.</description>
+        <description>A blueprint for the Zi Yang Sword</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
         </graphicData>
@@ -68,7 +68,7 @@
     <ThingDef ParentName="YanYu_WeaponBlueprintBase">
         <defName>YanYu_LvHouSwordBlueprint</defName>
         <label>Lv Hou Sword Blueprint</label>
-        <description>A blueprint for the Lv Hou Sword, a weapon known for its elegance and precision.</description>
+        <description>A blueprint for the Lv Hou Sword</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
         </graphicData>

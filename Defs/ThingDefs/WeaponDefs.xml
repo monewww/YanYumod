@@ -7,7 +7,6 @@
         <defName>YanYu_WuShangLongSword</defName>
         <label>Wu Shang Long Sword</label>
         <description>This is a longsword exclusively used by disciples of the Lingyue Sect. Slim and sharp, it embodies elegance without losing its edge. A crescent moon is engraved on the hilt, and it is said that when paired with the Wushang Sword Technique, it can unleash even greater power.</description>
-        <!-- 这是一柄泠月弟子专属的长剑，纤细锐利，优雅中不失锋芒，剑柄上刻着一轮弯月，据说与舞殇剑诀相配合，还能发挥出更大的威力 -->
         <graphicData>
             <texPath>YanYu_item/YanYu_Weapons/WuShangLongSword</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -71,6 +70,7 @@
     <ThingDef ParentName="YanYu_BaseGoldenMeleeWeapon">
         <defName>YanYu_HeiLongSword</defName>
         <label>Hei Long Sword</label>
+        <description>Deep as a torrent, unmatched in edge, excels at piercing armor; heavy plate crumbles like paper.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Weapons/HeiLongSword</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -135,6 +135,7 @@
     <ThingDef ParentName="YanYu_BaseGoldenMeleeWeapon">
         <defName>YanYu_YaJiuSword</defName>
         <label>Ya Jiu Sword</label>
+        <description>Shadowy as a raven, drinks blood unceasingly, nourishes its wielder; the more it fights, the braver it grows.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Weapons/YaJiuSword</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -198,6 +199,7 @@
     <ThingDef ParentName="YanYu_BaseGoldenMeleeWeapon">
         <defName>YanYu_ZiYangSword</defName>
         <label>Zi Yang Sword</label>
+        <description>Warm as sunlight, bathed in violet aura, restores vitality; life force surges from dantian.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Weapons/ZiYangSword</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -260,8 +262,8 @@
 
     <ThingDef ParentName="YanYu_BaseGoldenMeleeWeapon">
         <defName>YanYu_LvHouSword</defName>
-
         <label>Lv Hou Sword</label>
+        <description>A hero's steadfast blade, power flows through heaven and earth, overcomes foes; slays one within ten paces.</description>
         <graphicData>
             <texPath>YanYu_item/YanYu_Weapons/LvHouSword</texPath>
             <graphicClass>Graphic_Single</graphicClass>
