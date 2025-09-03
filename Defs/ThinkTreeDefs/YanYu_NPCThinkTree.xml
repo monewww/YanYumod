@@ -1,0 +1,146 @@
+<Defs>
+    <ThinkTreeDef>
+        <defName>YanYu_NPC_ThinkTree</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <!-- If we HAVE to keep lying down... -->
+                <li Class="ThinkNode_ConditionalMustKeepLyingDown">
+                    <subNodes>
+                        <!-- Do a queued job if possible (e.g. watch tv in bed) -->
+                        <li Class="ThinkNode_QueuedJob">
+                            <inBedOnly>true</inBedOnly>
+                        </li>
+
+                        <!-- Get joy -->
+                        <li Class="ThinkNode_Tagger">
+                            <tagToGive>SatisfyingNeeds</tagToGive>
+                            <subNodes>
+                                <li Class="ThinkNode_PrioritySorter">
+                                    <subNodes>
+                                        <li Class="ThinkNode_Priority_GetJoy">
+                                            <subNodes>
+                                                <li Class="JobGiver_GetJoyInBed" />
+                                            </subNodes>
+                                        </li>
+                                        <li Class="JobGiver_MeditateInBed" />
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
+
+                        <!-- Keep lying down -->
+                        <li Class="JobGiver_KeepLyingDown" />
+                    </subNodes>
+                </li>
+
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>Downed</treeDef>
+                </li>
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>BurningResponse</treeDef>
+                </li>
+
+                <!-- Escaping threats -->
+                <li Class="ThinkNode_Subtree" MayRequire="Ludeon.RimWorld.Biotech">
+                    <treeDef>Abilities_Escape</treeDef>
+                </li>
+
+                <!-- React to close melee threat -->
+                <li Class="JobGiver_ReactToCloseMeleeThreat" />
+
+                <!-- Do a queued job -->
+                <li Class="ThinkNode_QueuedJob" />
+
+                <!-- Self-tend if you're an NPC -->
+                <li Class="ThinkNode_ConditionalNPCCanSelfTendNow">
+                    <subNodes>
+                        <li Class="JobGiver_SelfTend" />
+                    </subNodes>
+                </li>
+
+                <!-- Lord directives (high priority) -->
+                <li Class="ThinkNode_JoinVoluntarilyJoinableLord">
+                    <dutyHook>HighPriority</dutyHook>
+                    <subNodes>
+                        <li Class="ThinkNode_Subtree">
+                            <treeDef>LordDuty</treeDef>
+                        </li>
+                    </subNodes>
+                </li>
+
+                <!-- If you can leave the map, do so  Mone:Although I do not expect this to happen
+                <li Class="ThinkNode_ConditionalColonist">
+                    <invert>true</invert>
+                    <subNodes>
+                        <li Class="ThinkNode_Tagger">
+                            <tagToGive>Misc</tagToGive>
+                            <subNodes>
+                                <li Class="JobGiver_ExitMapBest">
+                                    <defaultLocomotion>Walk</defaultLocomotion>
+                                </li>
+                            </subNodes>
+                        </li>
+                    </subNodes>
+                </li> -->
+
+                <!-- If you can't leave, just wander -->
+                <li Class="ThinkNode_Tagger">
+                    <tagToGive>Idle</tagToGive>
+                    <subNodes>
+                        <li Class="JobGiver_WanderAnywhere">
+                            <maxDanger>Deadly</maxDanger>
+                        </li>
+                    </subNodes>
+                </li>
+
+                <li Class="JobGiver_IdleError" />
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+
+    <ThinkTreeDef>
+        <defName>YanYu_NPC_ThinkTreeConstant</defName>
+        <thinkRoot Class="ThinkNode_Priority">
+            <subNodes>
+                <!-- Despawned -->
+                <li Class="ThinkNode_Subtree">
+                    <treeDef>Despawned</treeDef>
+                </li>
+
+                <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+                    <subNodes>
+                        <!-- Flee explosion -->
+                        <li Class="JobGiver_FleePotentialExplosion" />
+
+                        <!-- Avoid vacuums -->
+                        <li Class="JobGiver_FindOxygen" />
+
+                        <!-- Hostility response -->
+                        <li Class="JobGiver_ConfigurableHostilityResponse" />
+
+                        <!-- Stop crawling -->
+                        <li Class="ThinkNode_ConditionalIsCrawling">
+                            <subNodes>
+                                <li Class="ThinkNode_ConditionalCanCrawl">
+                                    <invert>true</invert>
+                                    <subNodes>
+                                        <li Class="JobGiver_IdleForever" />
+                                    </subNodes>
+                                </li>
+                            </subNodes>
+                        </li>
+                    </subNodes>
+                </li>
+
+                <li Class="ThinkNode_ConditionalCanDoLordJobNow">
+                    <subNodes>
+                        <!-- Lord directives -->
+                        <li Class="ThinkNode_Subtree">
+                            <treeDef>LordDutyConstant</treeDef>
+                        </li>
+                    </subNodes>
+                </li>
+            </subNodes>
+        </thinkRoot>
+    </ThinkTreeDef>
+</Defs>

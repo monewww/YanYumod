@@ -1,0 +1,16 @@
+<Defs>
+    <ThingSetMakerDef>
+        <defName>YanYuRaidLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>Silver</li>
+                        <li>MedicineIndustrial</li>
+                        <li>MealSurvivalPack</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+</Defs>

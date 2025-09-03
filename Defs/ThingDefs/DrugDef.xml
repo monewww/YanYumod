@@ -1,0 +1,37 @@
+<Defs>
+    <!-- 止血散 -->
+    <ThingDef ParentName="MedicineBase" >
+        <defName>HemostaticPowder</defName>
+        <label>HemostaticPowder</label>
+        <description>Hemostatic Powder is a highly effective healing medicine. For minor internal injuries, simply applying some of it will lead to a full recovery, restoring 25 health points.</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Medicine/HemostaticPowder</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <possessionCount>3</possessionCount>
+        <techLevel>Neolithic</techLevel>
+        <comps>
+            <li Class="CompProperties_Usable">
+                <useJob>UseItem</useJob>
+                <useLabel>Use {0}</useLabel>
+            </li>
+            <li Class="CompProperties_Forbiddable" />
+            <li Class="YanYu.ThingCompProperties_HealBlood">
+                <healAmount>25.0</healAmount>
+            </li>
+            <li Class="CompProperties_Rottable">
+                <daysToRotStart>150</daysToRotStart>
+                <rotDestroys>true</rotDestroys>
+            </li>
+        </comps>
+        <statBases>
+            <MarketValue>25</MarketValue>
+            <Mass>0.35</Mass>
+            <Flammability>1.3</Flammability>
+            <MedicalPotency>0.60</MedicalPotency>
+            <MedicalQualityMax>0.90</MedicalQualityMax>
+            <DeteriorationRate>2</DeteriorationRate>
+        </statBases>
+        <tickerType>Rare</tickerType>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,49 @@
+<Defs>
+    <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawAngelica</defName>
+    <label>Angelica</label>
+    <description>Raw angelica.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>YanYu_item/YanYu_RawPlants/RawAngelica</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>3.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>40</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawLicorice</defName>
+    <label>Licorice</label>
+    <description>Raw Licorice.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>YanYu_item/YanYu_RawPlants/RawLicorice</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>40</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
+</Defs>

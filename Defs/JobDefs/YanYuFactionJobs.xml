@@ -1,0 +1,9 @@
+<Defs>
+    <JobDef>
+        <defName>GoAndTalkWithLeader</defName>
+        <driverClass>YanYu.GoAndTalkWithLeader</driverClass>
+        <reportString>talking to leader</reportString>
+        <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+
+    </JobDef>
+</Defs>

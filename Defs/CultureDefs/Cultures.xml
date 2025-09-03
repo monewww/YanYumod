@@ -1,0 +1,49 @@
+<Defs>
+    <CultureDef Name="YanYu_TraditionCulture" Abstract="True">
+        <label>YanYu culture</label>
+        <description>The cultures of YanYu.</description>
+        <!--文化名称-->
+        <ideoNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerIdeoCorunan</ideoNameMaker>
+        <!--神明名称-->
+        <deityNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerDeityCorunan</deityNameMaker>
+        <!--神明类型-->
+        <deityTypeMaker MayRequire="Ludeon.RimWorld.Ideology">DeityTypeMakerCorunan</deityTypeMaker>
+        <!--节日名称-->
+        <festivalNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerFestivalCorunan</festivalNameMaker>
+        <allowedPlaceTags>
+            <li>OriginSpacer</li>
+        </allowedPlaceTags>
+        <iconColor>(1.0, 1.0, 1.0)</iconColor>
+        <styleItemTags>
+            <li>
+                <tag>Urban</tag>
+                <baseWeight>1</baseWeight>
+                <weightFactor>1</weightFactor>
+            </li>
+            <li>
+                <tag>Rural</tag>
+                <baseWeight>1</baseWeight>
+                <weightFactor>1</weightFactor>
+            </li>
+            <li>
+                <tag>NoBeard</tag>
+                <baseWeight>1</baseWeight>
+                <weightFactor>1</weightFactor>
+            </li>
+            <li>
+                <tag>NoTattoo</tag>
+                <baseWeight>1</baseWeight>
+                <weightFactor>1</weightFactor>
+            </li>
+        </styleItemTags>
+    </CultureDef>
+
+    <CultureDef ParentName="YanYu_TraditionCulture">
+        <defName>YanYu_LingYueGongCulture</defName>
+        <label>Ling Yue Gong culture</label>
+        <description>The culture of the Ling Yue Palace.</description>
+        <leaderTitleMaker MayRequire="Ludeon.RimWorld.Ideology">YanYu_NamerLeader_LingYueGong</leaderTitleMaker>
+        <pawnNameMaker MayRequire="Ludeon.RimWorld.Ideology">NamerPersonLingYueGong</pawnNameMaker>
+        <iconPath>YanYu_icon/FactionIcon/LingYueGong_icon</iconPath>
+    </CultureDef>
+</Defs>

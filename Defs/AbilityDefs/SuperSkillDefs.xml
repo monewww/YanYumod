@@ -1,0 +1,124 @@
+<Defs>
+  <AbilityDef Name="YanYu_SuperSkillBase" Abstract="True">
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <displayOrder>204</displayOrder>
+  </AbilityDef>
+
+  <AbilityDef ParentName="YanYu_SuperSkillBase">
+    <defName>YanYu_Martial_BasicSwordsmanship_SuperSkill</defName>
+    <label>Basic Swordsmanship Martial</label>
+    <description>The move feints unpredictably, making it impossible for the opponent to guard against. After dealing damage, there is a 70% chance to inflict a second hit.</description>
+    <iconPath>YanYu_ability/YanYu_martial/BasicSwordsmanship_Skill</iconPath>
+    <cooldownTicksRange>2100</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <!-- <soundCast>Axolotl_Sound_SwordAura_Super</soundCast> -->
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "YanYu.CompProperties_BasicSwordsmanship_SuperSkill">
+        <damage>40</damage>
+        <comboChance>0.7</comboChance>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef ParentName="YanYu_SuperSkillBase">
+    <defName>YanYu_Martial_WuShangSwordsmanship_SuperSkill</defName>
+    <label>WuShang Swordsmanship Martial</label>
+    <description>Swing the longsword with resolute detachment to deal damage to the enemy, then follow up with a second hit causing additional damage.</description>
+    <iconPath>YanYu_ability/YanYu_martial/WuShangSwordsmanship_Skill</iconPath>
+    <cooldownTicksRange>2700</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "YanYu.CompProperties_WuShangSwordsmanship_SuperSkill">
+        <damage>40</damage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef ParentName="YanYu_SuperSkillBase">
+    <defName>YanYu_Martial_HuaXuanSwordsmanship_SuperSkill</defName>
+    <label>HuaXuanShiYiJian</label>
+    <description>When the sword is unsheathed, the wielder splits into seven phantoms, striking random enemies seven times. Each strike deals 50% damage and leaves behind a trace of arcane sword aura on the target.</description>
+    <iconPath>YanYu_ability/YanYu_martial/HuaXuanSwordsmanship_Skill</iconPath>
+    <cooldownTicksRange>4200</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "YanYu.CompProperties_HuaXuanSwordsmanship_SuperSkill">
+        <damage>20</damage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- 拳 -->
+
+
+  <AbilityDef ParentName="YanYu_SuperSkillBase">
+    <defName>YanYu_Martial_BasicFistTechnique_SuperSkill</defName>
+    <label>Basic Fist Technique Martial</label>
+    <description>The move feints unpredictably, making it impossible for the opponent to guard against. After dealing damage, there is a 70% chance to inflict a second hit.</description>
+    <iconPath>YanYu_ability/YanYu_martial/BasicFistTechnique_Skill</iconPath>
+    <cooldownTicksRange>2100</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "YanYu.CompProperties_BasicFistTechnique_SuperSkill">
+        <damage>40</damage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <AbilityDef ParentName="YanYu_SuperSkillBase">
+    <defName>YanYu_Martial_PianHuaQiXingQuan_SuperSkill</defName>
+    <label>PianHua QiXing Quan Martial</label>
+    <description>The move feints unpredictably, making it impossible for the opponent to guard against. After dealing damage, there is a 70% chance to inflict a second hit.</description>
+    <iconPath>YanYu_ability/YanYu_martial/PianHuaQiXingQuan_Skill</iconPath>
+    <cooldownTicksRange>2100</cooldownTicksRange>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>18</range>
+      <warmupTime>1.5</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "YanYu.CompProperties_PianHuaQiXingQuan_SuperSkill">
+        <damage>40</damage>
+      </li>
+    </comps>
+  </AbilityDef>
+
+
+</Defs>

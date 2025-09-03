@@ -1,9 +1,12 @@
 # Visual Studio
-.vs/    
+Sources/.vs/    
 
 # Build output
-bin/
-obj/
+Sources/bin/
+Sources/obj/
 *.exe
 *.dll
 *.pdb
+
+debug.txt
+test.py

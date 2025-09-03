@@ -1,0 +1,441 @@
+<Defs>
+    <!-- MoveSpeed	移动速度加成（影响走路速度）
+    MeleeHitChance	近战命中率
+    MeleeDodgeChance	近战闪避率
+    AccuracyTouch	射击精度（近距离）
+    AccuracyShort	射击精度（中距离）
+    AccuracyMedium	射击精度（远距离）
+    AccuracyLong	射击精度（极远距离）
+    AimingDelayFactor	瞄准时间系数（越低越快）
+    ShootingAccuracyPawn	射击总命中率（常用于 Pawn）
+    ArmorRating_Sharp	尖锐防御（刀枪）
+    ArmorRating_Blunt	钝器防御（锤击）
+    ArmorRating_Heat	热能防御（火焰）
+    PainShockThreshold	疼痛休克阈值（提升耐疼性）
+    SocialImpact	社交影响力（影响交易、交谈）
+    MentalBreakThreshold	精神崩溃阈值（越低越抗压）
+    PsychicSensitivity	心灵敏感度（影响心灵事件）
+    TradePriceImprovement	交易价格改善（买便宜卖贵）
+    NegotiationAbility	谈判能力（影响囚犯招募、交易）
+    HuntingStealth	狩猎隐蔽度（不易惊动猎物）
+    ImmunityGainSpeed	免疫获得速度（提高治愈力）
+    MedicalTendQualityOffset	医疗包扎质量加成
+    WorkSpeedGlobal	全局工作速度
+    ConstructionSpeed	建造速度
+    ConstructionSuccessChance	建造成功率
+    Manipulation	操控能力（影响多数工作效率） -->
+    <ThingDef Name="YanYu_ApparelBase" Abstract="True">
+        <thingClass>Apparel</thingClass>
+        <category>Item</category>
+        <selectable>True</selectable>
+        <pathCost>10</pathCost>
+        <useHitPoints>True</useHitPoints>
+        <techLevel>Medieval</techLevel>
+        <graphicData>
+            <shaderType>CutoutComplex</shaderType>
+            <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+            <drawSize>1.4</drawSize>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>1.2</Flammability>
+            <DeteriorationRate>2</DeteriorationRate>
+            <Beauty>-3</Beauty>
+            <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+            <StuffEffectMultiplierInsulation_Cold>0.55</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>0.55</StuffEffectMultiplierInsulation_Heat>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>True</alwaysHaulable>
+        <tickerType>Never</tickerType>
+        <comps>
+            <li Class="CompProperties_Styleable" />
+            <li Class="CompProperties_Forbiddable" />
+            <li>
+                <compClass>CompColorable</compClass>
+            </li>
+        </comps>
+        <tradeTags Inherit="false">
+            <li>YanYu_Apparel</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef Name="YanYu_ApparelMakeableBase" ParentName="YanYu_ApparelBase" Abstract="True">
+        <thingCategories>
+            <li>YanYu_Apparel</li>
+        </thingCategories>
+        <recipeMaker>
+            <workSkill>Crafting</workSkill>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <effectWorking>Tailor</effectWorking>
+            <soundWorking>Recipe_Tailor</soundWorking>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+        </recipeMaker>
+        <apparel>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+            <wearPerDay>0.1</wearPerDay>
+        </apparel>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+    <!-- 金蝉宝衣 -->
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_GoldenCicadaTreasureRobe">
+        <defName>YanYu_GoldenCicadaTreasureRobe</defName>
+        <label>golden cicada treasure robe</label>
+        <description>Once a sacred treasure of the Zhe tribe, this armor is made from silk refined
+            from crushed Fire Essence Stones. It is remarkably light yet possesses the strength of
+            stone. Offers resistance to intense flames and soothes inner turmoil.</description>
+        <!-- 此甲本是那遮部落的宝物，如今流落江湖。将火精石挫之取丝，经过复杂的工序制成甲身。质地轻便却坚韧，有磐石之固。更可阻烈火，除心火 -->
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/GoldenCicadaTreasureRobe/GoldenCicadaTreasureRobe</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>1.75</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.60</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.80</ArmorRating_Heat>
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Adult</developmentalStageFilter>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/GoldenCicadaTreasureRobe/GoldenCicadaTreasureRobe</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_FeiYuJingYi">
+        <defName>YanYu_FeiYuJingYi</defName>
+        <label>fei yu jing yi</label>
+        <description>Official uniform of the Six Gates Bureau</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/FeiYuJingYi/FeiYuJingYi</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.30</ArmorRating_Heat>
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Adult</developmentalStageFilter>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/FeiYuJingYi/FeiYuJingYi</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+        <equippedStatOffsets>
+            <PawnBeauty>+1</PawnBeauty>
+            <SocialImpact>+0.5</SocialImpact>
+            <NegotiationAbility>+2.0</NegotiationAbility>
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">+2.0</SuppressionPower>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-2.0</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_NieYingFu">
+        <defName>YanYu_NieYingFu</defName>
+        <label>Nie ying fu</label>
+        <description>Exclusive robe of the Soulbinding Pavilion</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/NieYingFu/NieYingFu</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.30</ArmorRating_Heat>
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Adult</developmentalStageFilter>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/NieYingFu/NieYingFu</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+        <equippedStatOffsets>
+            <PawnBeauty>+1</PawnBeauty>
+            <SocialImpact>+0.5</SocialImpact>
+            <HuntingStealth>+0.5</HuntingStealth>
+            <MeleeHitChance>+2.0</MeleeHitChance>
+            <MeleeDodgeChance>+0.5</MeleeDodgeChance>
+            <NegotiationAbility>-1.0</NegotiationAbility>
+            <PsychicSensitivity>-0.3</PsychicSensitivity>
+            <SuppressionPower MayRequire="Ludeon.RimWorld.Ideology">+1.0</SuppressionPower>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-2.0</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+    </ThingDef>
+    <!-- 八卦门专属衣物：Bagua Sect Exclusive Outfit
+
+    桃花坞专属衣物：Peach Blossom Dock Exclusive Outfit
+
+    空绝谷专属衣物：Empty Abyss Valley Exclusive Outfit
+
+    归云岛专属衣物：Returning Cloud Island Exclusive Outfit
+
+    奇人庄专属衣物：Strange Folk Manor Exclusive Outfit -->
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_YouLongYunShan">
+        <defName>YanYu_YouLongYunShan</defName>
+        <label>You Long Yun Shan</label>
+        <description>Bagua Sect Exclusive Outfit</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/YouLongYunShan/YouLongYunShan</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.30</ArmorRating_Heat>
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Adult</developmentalStageFilter>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/YouLongYunShan/YouLongYunShan</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+        <equippedStatOffsets>
+            <PawnBeauty>+1</PawnBeauty>
+            <SocialImpact>+0.2</SocialImpact>
+            <MeleeHitChance>+1.5</MeleeHitChance>
+            <MeleeDodgeChance>-0.5</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <comps>
+            <li Class="YanYu.CompProperties_RenameByGender" />
+        </comps>
+
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_YuXianPao">
+        <defName>YanYu_YuXianPao</defName>
+        <label>Yu Xian Pao</label>
+        <description>Peach Blossom Dock Exclusive Outfit</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/YuXianPao/YuXianPao</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.30</ArmorRating_Heat> 
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Adult</developmentalStageFilter>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/YuXianPao/YuXianPao</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+        <equippedStatOffsets>
+            <PawnBeauty>+1</PawnBeauty>
+            <SocialImpact>+0.2</SocialImpact>
+            <MentalBreakThreshold>+0.3</MentalBreakThreshold>
+            <PsychicSensitivity>+0.5</PsychicSensitivity>
+        </equippedStatOffsets>
+        <comps>
+            <li Class="YanYu.CompProperties_RenameByGender" />
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_DiaoQiu">
+        <defName>YanYu_DiaoQiu</defName>
+        <label>Diao Qiu</label>
+        <description>Empty Abyss Valley Exclusive Outfit</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/DiaoQiu/DiaoQiu</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.30</ArmorRating_Heat>
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Adult</developmentalStageFilter>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/DiaoQiu/DiaoQiu</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+        <equippedStatOffsets>
+            <PawnBeauty>+1</PawnBeauty>
+            <SocialImpact>+0.2</SocialImpact>
+            <TradePriceImprovement>+0.1</TradePriceImprovement>
+            <SocialImpact>+0.25</SocialImpact>
+        </equippedStatOffsets>
+        <comps>
+            <li Class="YanYu.CompProperties_RenameByGender" />
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_QinNiaoGeLang">
+        <defName>YanYu_QinNiaoGeLang</defName>
+        <label>Qin Niao Ge Lang</label>
+        <description>Returning Cloud Island Exclusive Outfit</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/QinNiaoGeLang/QinNiaoGeLang</texPath>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>60000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.30</ArmorRating_Heat>
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Adult</developmentalStageFilter>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/QinNiaoGeLang/QinNiaoGeLang</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+        <equippedStatOffsets>
+            <PawnBeauty>+1</PawnBeauty>
+            <SocialImpact>+0.2</SocialImpact>
+            <MeleeHitChance>-0.5</MeleeHitChance>
+            <MeleeDodgeChance>+1.5</MeleeDodgeChance>
+        </equippedStatOffsets>
+        <comps>
+            <li Class="YanYu.CompProperties_RenameByGender" />
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_ApparelBase" Name="YanYu_HuangBuSengYi">
+        <defName>YanYu_HuangBuSengYi</defName>
+        <label>Huang Bu Seng Yi</label>
+        <description>the Huang Bu Seng Yi</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_Armors/HuangBuSengYi/HuangBuSengYi</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+            <Mass>1.2</Mass>
+            <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.8</ArmorRating_Heat>
+            <StuffEffectMultiplierInsulation_Cold>1.70</StuffEffectMultiplierInsulation_Cold>
+            <StuffEffectMultiplierInsulation_Heat>2.30</StuffEffectMultiplierInsulation_Heat>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <apparel>
+            <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+            <shellRenderedBehindHead>true</shellRenderedBehindHead>
+            <wornGraphicPath>YanYu_item/YanYu_Armors/HuangBuSengYi/HuangBuSengYi</wornGraphicPath>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+                <li>Neck</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Middle</li>
+                <li>Shell</li>
+            </layers>
+        </apparel>
+        <equippedStatOffsets>
+            <PawnBeauty>+1</PawnBeauty>
+            <SocialImpact>+0.1</SocialImpact>
+        </equippedStatOffsets>
+    </ThingDef>
+    
+</Defs>

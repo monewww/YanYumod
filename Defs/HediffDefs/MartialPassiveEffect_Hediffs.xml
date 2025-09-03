@@ -1,0 +1,39 @@
+<Defs>
+    <HediffDef Name="YanYu_MartialPassiveHediffBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass>
+        <initialSeverity>1</initialSeverity>
+        <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
+        <duplicationAllowed>false</duplicationAllowed>
+    </HediffDef>
+
+    <HediffDef ParentName="YanYu_MartialPassiveHediffBase">
+        <defName>YanYu_MartialPassiveEffect_WuShangMomentum</defName>
+        <label>WuShangMomentum</label>
+        <description>The sword moves like a dance beneath the moonlight, each strike layering power upon the last.</description>
+        <!-- 挥剑犹如月下起舞，威力重重叠加 -->
+        <defaultLabelColor>(1.0, 0.713, 0.756)</defaultLabelColor>
+        <isBad>false</isBad>
+        <alwaysShowSeverity>true</alwaysShowSeverity>
+        <defaultInstallPart>Brain</defaultInstallPart>
+    </HediffDef>
+
+    <!-- 拳 -->
+
+    <HediffDef ParentName="YanYu_MartialPassiveHediffBase">
+        <defName>YanYu_MartialPassiveEffect_PianHuaFistPower</defName>
+        <label>PianHua Fist Power</label>
+        <description>TODO</description>
+        <defaultLabelColor>(0.32, 0.67, 0.39)</defaultLabelColor>
+        <isBad>false</isBad>
+        <alwaysShowSeverity>true</alwaysShowSeverity>
+        <defaultInstallPart>Brain</defaultInstallPart>
+        <stages>
+            <li>
+                <statFactors>
+                    <ArmorRating_Sharp>1.02</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>1.03</ArmorRating_Blunt>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>     

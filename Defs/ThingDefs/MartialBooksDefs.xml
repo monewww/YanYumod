@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--//////book base-->
+  <ThingDef Name="YanYu_MartialBookBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <altitudeLayer>Item</altitudeLayer>
+    <drawerType>MapMeshOnly</drawerType>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <Mass>0.2</Mass>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <alwaysHaulable>true</alwaysHaulable>
+    <stackLimit>20</stackLimit>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <category>Item</category>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0}</useLabel>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <tradeability>Buyable</tradeability>
+    <tradeTags Inherit="false">
+      <li>YanYu_MartialBooks</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <!--BasicSwordsmanship-->
+  <ThingDef Name = "BasicSwordsmanship" ParentName="YanYu_MartialBookBase">
+    <defName>YanYu_Martial_BasicSwordsmanship</defName>
+    <label>Basic Swordsmanship Book</label>
+    <description>A book that teaches the basics of swordsmanship.</description>
+    <graphicData>
+      <texPath>YanYu_item/YanYu_Books/Martial/MartialBook_A</texPath>
+      <drawSize>(1.0, 1.0)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Beauty>5</Beauty>
+    </statBases>
+    <comps>
+      <li Class= "YanYu.ThingCompProperties_UseMartialbook">
+        <uniqueMartial>False</uniqueMartial>
+        <giveHediffDef>YanYu_MartialHediff_BasicSwordsmanship</giveHediffDef>
+        <martialName>BasicSwordsmanship</martialName>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!--WuShangSwordsmanship-->
+  <ThingDef Name = "WuShangSwordsmanship" ParentName="YanYu_MartialBookBase">
+    <defName>YanYu_Martial_WuShangSwordsmanship</defName>
+    <label>WuShang Swordsmanship Book</label>
+    <description>A book that teaches the advanced techniques of WuShang swordsmanship.</description>
+    <graphicData>
+      <texPath>YanYu_item/YanYu_Books/Martial/MartialBook_C</texPath> 
+      <drawSize>(1.0, 1.0)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+      <Beauty>10</Beauty>
+    </statBases>
+    <comps>
+      <li Class= "YanYu.ThingCompProperties_UseMartialbook">
+        <uniqueMartial>False</uniqueMartial>
+        <giveHediffDef>YanYu_MartialHediff_WuShangSwordsmanship</giveHediffDef>
+        <martialName>WuShangSwordsmanship</martialName>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--HuaXuanSwordsmanship-->
+  <ThingDef Name = "HuaXuanSwordsmanship" ParentName="YanYu_MartialBookBase">
+    <defName>YanYu_Martial_HuaXuanSwordsmanship</defName>
+    <label>HuaXuan Swordsmanship Book</label>
+    <description>A book that teaches the mystical techniques of HuaXuan swordsmanship.</description>
+    <graphicData>
+      <texPath>YanYu_item/YanYu_Books/Martial/MartialBook_B</texPath>
+      <drawSize>(1.0, 1.0)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>10000</MarketValue>
+      <Beauty>15</Beauty>
+    </statBases>
+    <comps>
+      <li Class= "YanYu.ThingCompProperties_UseMartialbook">
+        <uniqueMartial>False</uniqueMartial>
+        <giveHediffDef>YanYu_MartialHediff_HuaXuanSwordsmanship</giveHediffDef>
+        <martialName>HuaXuanSwordsmanship</martialName>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+  <!--BasicFistTechnique-->
+  <ThingDef Name = "BasicFistTechnique" ParentName="YanYu_MartialBookBase">
+    <defName>YanYu_Martial_BasicFistTechnique</defName>
+    <label>Basic Fist Technique Book</label>
+    <description>A book that teaches the basics of fist techniques.</description>
+    <graphicData>
+      <texPath>YanYu_item/YanYu_Books/Martial/MartialBook_A</texPath>
+      <drawSize>(1.0, 1.0)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Beauty>5</Beauty>
+    </statBases>
+    <comps>
+      <li Class= "YanYu.ThingCompProperties_UseMartialbook">
+        <uniqueMartial>False</uniqueMartial>
+        <giveHediffDef>YanYu_MartialHediff_BasicFistTechnique</giveHediffDef>
+        <martialName>BasicFistTechnique</martialName>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- PianHuaQiXingQuan -->
+  <ThingDef  ParentName="YanYu_MartialBookBase">
+    <defName>YanYu_Martial_PianHuaQiXingQuan</defName>
+    <label>PianHua QiXing Quan Book</label>
+    <description>A book that teaches the basics of PianHua QiXing Quan techniques.</description>
+    <graphicData>
+      <texPath>YanYu_item/YanYu_Books/Martial/MartialBook_B</texPath>
+      <drawSize>(1.0, 1.0)</drawSize>
+    </graphicData>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <Beauty>5</Beauty>
+    </statBases>
+    <comps>
+      <li Class= "YanYu.ThingCompProperties_UseMartialbook">
+        <uniqueMartial>true</uniqueMartial>
+        <giveHediffDef>YanYu_MartialHediff_PianHuaQiXingQuan</giveHediffDef>
+        <martialName>PianHuaQiXingQuan</martialName>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+</Defs>

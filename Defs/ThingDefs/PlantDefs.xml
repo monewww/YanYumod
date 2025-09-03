@@ -1,0 +1,71 @@
+<Defs>
+    <ThingDef ParentName="PlantBase">
+    <defName>Plant_Angelica</defName>
+    <label>Angelica plant</label>
+    <description>one of the most commonly used traditional Chinese medicines. Its sweet and rich flavor makes it especially effective in replenishing blood, while its light and pungent nature helps to promote blood circulation. Thus, it is regarded as an essential herb for blood-related conditions. For this reason, it is often used in the preparation of medicines that replenish blood and heal internal injuries.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.175</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>YanYu_plant/Angelica/Angelica</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>YanYu_plant/Angelica/Angelica_Immature</immatureGraphicPath>
+      <dieIfLeafless>true</dieIfLeafless>
+      <maxMeshCount>4</maxMeshCount>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RawAngelica</harvestedThingDef>
+      <harvestYield>3</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>0.9</growDays>
+      <visualSizeRange>0.5~0.8</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <purpose>Health</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>Plant_Licorice</defName>
+    <label>Licorice plant</label>
+    <description>The most common herb found in the martial world. Mild in nature and non-toxic, it can be used to moderate the potency of certain medicinal ingredients and is added to many prescriptions.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>YanYu_plant/Licorice/Licorice</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>YanYu_plant/Licorice/Licorice_Immature</immatureGraphicPath>
+      <dieIfLeafless>true</dieIfLeafless>
+      <maxMeshCount>4</maxMeshCount>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RawLicorice</harvestedThingDef>
+      <harvestYield>8</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+        <li>Hydroponic</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>0.6</growDays>
+      <visualSizeRange>0.5~0.8</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <purpose>Health</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+    </plant>
+  </ThingDef>
+</Defs>

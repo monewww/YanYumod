@@ -1,0 +1,216 @@
+<Defs>
+    <FactionDef ParentName="FactionBase" Name="YanYu_FactionBase" Abstract="True">
+        <pawnSingular>knight_errant</pawnSingular>
+        <pawnsPlural>knights_errants</pawnsPlural>
+        <categoryTag>knight_errant</categoryTag>
+        <listOrderPriority>30</listOrderPriority>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canSiege>true</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <permanentEnemyToEveryoneExceptPlayer>false</permanentEnemyToEveryoneExceptPlayer>
+        <mustStartOneEnemy>false</mustStartOneEnemy>
+        <naturalEnemy>false</naturalEnemy>
+        <leaderTitle>Master</leaderTitle>
+        <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+        <!-- <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath> -->
+        <techLevel>Medieval</techLevel>
+        <settlementGenerationWeight>0</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+        <requiredMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">FemaleSupremacy</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+        </requiredMemes>
+        <disallowedPrecepts>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Classic</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Horrible</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Disapproved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_Prohibited</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_Horrible</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_FreeApproved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Lovin_Free</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_Acceptable</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_HorribleSellOK</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_HorribleNoSell</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Skullspike_Disapproved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">InsectMeatEating_Despised_Classic</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Horrible</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">HAR_AlienSlavery_Disapproved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">HAR_EatingAliens_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">HAR_EatingAliens_Disapproved</li>
+        </disallowedPrecepts>
+        <disallowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+        </disallowedMemes>
+        <xenotypeSet>
+            <xenotypeChances>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0.025</Genie>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+                <Starjack MayRequire="Ludeon.RimWorld.Biotech,Ludeon.RimWorld.Odyssey">0.025</Starjack>
+            </xenotypeChances>
+        </xenotypeSet>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Outlander</li>
+                </categories>
+                <commonality>0.95</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+                <commonality>0.05</commonality>
+            </li>
+        </backstoryFilters>
+        <!-- bulkgoods:粮食矿物等 -->
+        <!-- CombatSupplier:武器衣物等 -->
+        <!-- Exotic:珍宝藏宝图等 -->
+        <!-- Pirate:奴隶和其装备等 -->
+        <caravanTraderKinds>
+            <li>Caravan_YanYu_BulkGoods</li>
+            <li>Caravan_YanYu_CombatSupplier</li>
+            <li>Caravan_YanYu_Exotic</li>
+            <li>Caravan_YanYu_SlaveMerchant</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_YanYu_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_YanYu_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <raidLootMaker>YanYuRaidLootMaker</raidLootMaker>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 150)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights, standard mix -->
+                <kindDef>Combat</kindDef>
+                <options>
+                    <Villager>5</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Grenadier_Destructive>1.5</Grenadier_Destructive>
+                    <Mercenary_Slasher>7</Mercenary_Slasher>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <Villager>20</Villager>
+                    <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+                    <Town_Guard>10</Town_Guard>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Town_Trader>1</Town_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <Villager>3</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Grenadier_Destructive>1.5</Grenadier_Destructive>
+                    <Mercenary_Slasher>7</Mercenary_Slasher>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <Villager>10</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Grenadier_Destructive>1.5</Grenadier_Destructive>
+                    <Mercenary_Slasher>7</Mercenary_Slasher>
+                    <Mercenary_Gunner>10</Mercenary_Gunner>
+                    <Mercenary_Elite>10</Mercenary_Elite>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Miner>1</Miner>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Hunters</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Hunter>1</Hunter>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Loggers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Logger>1</Logger>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Farmers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Farmer>1</Farmer>
+                </options>
+            </li>
+        </pawnGroupMakers>
+    </FactionDef>
+
+    <FactionDef ParentName="YanYu_FactionBase">
+        <defName>YanYu_LingYueGong</defName>
+        <description>In the martial world, there is only one sect that accepts women exclusively — the Lingyue Palace. It is renowned for its two martial arts disciplines: swordsmanship and palm techniques. According to legend, the founder of Lingyue Palace was once a disciple of Emei. After committing a grave offense, she was expelled from the sect. Upon reaching Mingyue Mountain, she beheld the bright, clear moon atop its peak and was suddenly struck by inspiration. She created the Shadow Moon Divine Art on the spot and founded Lingyue Palace there, welcoming women from across the land to train in martial arts.Their techniques are light and ethereal, seemingly soft and powerless, yet in truth as swift and fierce as a tiger — a balanced cultivation of both inner and outer strength, delivering formidable power.</description>
+        <factionNameMaker>NamerFactionLingYueGong</factionNameMaker>
+        <settlementNameMaker>NamerSettlementLingYueGong</settlementNameMaker>
+        <factionIconPath>YanYu_icon/FactionIcon/LingYueGong_icon</factionIconPath>
+        <settlementTexturePath>YanYu_icon/FactionIcon/LingYueGong_icon</settlementTexturePath>
+        <colorSpectrum>
+            <li>(1, 0.788, 0.87)</li>
+            <li>(1, 0.4, 0.839)</li>
+            <li>(0.8, 0.3, 0.6)</li>
+        </colorSpectrum>
+        <backstoryCategories>
+            <li>Offworld</li>
+        </backstoryCategories>
+        <allowedCultures>
+            <li>YanYu_LingYueGongCulture</li>
+        </allowedCultures>
+
+    </FactionDef>
+
+</Defs>

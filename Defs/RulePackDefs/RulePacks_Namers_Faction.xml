@@ -1,0 +1,55 @@
+<Defs>
+    <RulePackDef>
+        <defName>NamerSettlementLingYueGong</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->Ling Yue Palace</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>NamerFactionLingYueGong</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_name->Ling Yue Palace</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+    <RulePackDef>
+        <defName>NamerPersonLingYueGongUtility</defName>
+        <rulePack>
+            <rulesFiles>
+                <li>FirstNameChar->Names/FirstName_A</li>
+                <li>LastNameChar->Names/LastName_Female_A</li>
+            </rulesFiles>
+            <rulesStrings>
+                <li>Firstname->[FirstNameChar]</li>
+                <li>Lastname->Yue[LastNameChar]</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+
+      <RulePackDef>
+    <defName>NamerPersonLingYueGong</defName>
+    <include>
+      <li>NamerPersonLingYueGongUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name-&gt;[Firstname] [Lastname]</li>
+        <li>r_nickName->[Lastname]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+    <RulePackDef>
+        <defName>YanYu_NamerLeader_LingYueGong</defName>
+        <rulePack>
+            <rulesStrings>
+                <li>r_leaderTitle->Master</li>
+            </rulesStrings>
+        </rulePack>
+    </RulePackDef>
+</Defs>

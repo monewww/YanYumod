@@ -1,0 +1,21 @@
+<Defs>
+    <StatDef>
+        <defName>HealOnDamage</defName>
+        <label>lifesteal</label>
+        <description>Heals this pawn for a portion of the damage they deal.</description>
+        <defaultBaseValue>0</defaultBaseValue>
+        <toStringStyle>PercentZero</toStringStyle>
+        <workerClass>StatWorker</workerClass>
+        <category>PawnCombat</category>
+    </StatDef>
+
+    <StatDef>
+        <defName>AutoHealPerSecond</defName>
+        <label>auto heal</label>
+        <description>Pawn passively heals this amount of HP per second (60 ticks).</description>
+        <category>PawnCombat</category>
+        <defaultBaseValue>0</defaultBaseValue>
+        <toStringStyle>FloatTwo</toStringStyle>
+        <minValue>0</minValue>
+    </StatDef>
+</Defs>

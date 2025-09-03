@@ -1,0 +1,39 @@
+<Defs>
+    <RecipeDef>
+        <defName>MakeHemostaticPowder</defName>
+        <label>Make Hemostatic Powder</label>
+        <jobString>Making Hemostatic Powder...</jobString>
+        <workAmount>300</workAmount>
+        <effectWorking>ConstructMetal</effectWorking>
+        <soundWorking>Recipe_Plant</soundWorking>
+        <workSkill>Medicine</workSkill>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <products>
+            <HemostaticPowder>2</HemostaticPowder>
+        </products>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawLicorice</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawAngelica</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <skillRequirements>
+            <Medicine>3</Medicine>
+        </skillRequirements>
+    </RecipeDef>
+
+</Defs>

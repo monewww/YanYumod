@@ -1,0 +1,79 @@
+<Defs>
+    <ThingDef Name="YanYu_WeaponBlueprintBase" ParentName="ResourceBase" Abstract="True">
+        <thingClass>ThingWithComps</thingClass>
+        <defName>YanYu_WeaponBlueprintBase</defName>
+        <label>WeaponBlueprintBase</label>
+        <description>WeaponBlueprintBase</description>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1.0</drawSize>
+        </graphicData>
+        <statBases>
+            <MarketValue>150</MarketValue>
+            <Mass>0.1</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Items</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_WeaponBlueprintBase">
+        <defName>YanYu_WuShangLongSwordBlueprint</defName>
+        <label>Wu Shang Long Sword Blueprint</label>
+        <description>A blueprint for the Wu Shang Long Sword, a weapon known for its elegance and sharpness.</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_WeaponBlueprintBase">
+        <defName>YanYu_HeiLongSwordBlueprint</defName>
+        <label>Hei Long Sword Blueprint</label>
+        <description>A blueprint for the Hei Long Sword, a weapon known for its power and durability.</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_WeaponBlueprintBase">
+        <defName>YanYu_YaJiuSwordBlueprint</defName>
+        <label>Ya Jiu Sword Blueprint</label>
+        <description>A blueprint for the Ya Jiu Sword, a weapon known for its agility and precision.</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_WeaponBlueprintBase">
+        <defName>YanYu_ZiYangSwordBlueprint</defName>
+        <label>Zi Yang Sword Blueprint</label>
+        <description>A blueprint for the Zi Yang Sword, a weapon known for its balance and versatility.</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
+    </ThingDef>
+
+    <ThingDef ParentName="YanYu_WeaponBlueprintBase">
+        <defName>YanYu_LvHouSwordBlueprint</defName>
+        <label>Lv Hou Sword Blueprint</label>
+        <description>A blueprint for the Lv Hou Sword, a weapon known for its elegance and precision.</description>
+        <graphicData>
+            <texPath>YanYu_item/YanYu_WeaponBlueprint/SwordBlueprint</texPath>
+        </graphicData>
+        <statBases>
+            <MarketValue>1200</MarketValue>
+        </statBases>
+    </ThingDef>
+</Defs>

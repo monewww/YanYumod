@@ -1,0 +1,28 @@
+<Defs>
+    <ThingDef ParentName="BuildingNaturalBase">
+    <defName>YanYu_WallA</defName>
+    <label>YanYu Wall A</label>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>YanYu_wall/YanYu_WallA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <rotatable>false</rotatable>
+    <destroyable>false</destroyable>
+    <useHitPoints>false</useHitPoints>
+    <tickerType>Normal</tickerType>
+    <selectable>true</selectable>
+    <size>(1,1)</size>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+    <building>
+      <isEdifice>true</isEdifice>
+      <claimable>false</claimable>
+      <deconstructible>false</deconstructible>
+    </building>
+  </ThingDef>
+</Defs>

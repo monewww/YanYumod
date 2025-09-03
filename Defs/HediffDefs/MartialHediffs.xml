@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef Name="YanYu_MartialHediffBase" Abstract="True">
+        <hediffClass>HediffWithComps</hediffClass> 
+        <isBad>false</isBad>
+        <priceImpact>true</priceImpact>
+        <initialSeverity>1</initialSeverity>
+        <keepOnBodyPartRestoration>false</keepOnBodyPartRestoration>
+        <duplicationAllowed>false</duplicationAllowed>
+    </HediffDef>
+
+    <HediffDef ParentName="YanYu_MartialHediffBase">
+        <defName>YanYu_MartialHediff_BasicSwordsmanship</defName>
+        <label>Basic Swordsmanship</label>
+        <description>This character has studied basic swordsmanship.</description>
+        <defaultLabelColor>(0.11, 0.44, 1)</defaultLabelColor>
+        <defaultInstallPart>Brain</defaultInstallPart>
+        <comps>
+            <li Class="YanYu.HediffCompProperties_MartialHediff">
+                <YanYu_Martials>
+                    <li>YanYu_Martial_BasicSwordsmanship_SuperSkill</li>
+                </YanYu_Martials>
+                <uniqueMartial>False</uniqueMartial>
+            </li>
+        </comps>
+
+    </HediffDef>
+
+    <HediffDef ParentName="YanYu_MartialHediffBase">
+        <defName>YanYu_MartialHediff_WuShangSwordsmanship</defName>
+        <label>WuShangSwordsmanship</label>
+        <description>This character has studied WuShangSwordsmanship.</description>
+        <defaultLabelColor>(1.0, 0.713, 0.756)</defaultLabelColor>
+        <defaultInstallPart>Brain</defaultInstallPart>
+        <comps>
+            <li Class="YanYu.HediffCompProperties_MartialHediff">
+                <YanYu_Martials>
+                    <li>YanYu_Martial_WuShangSwordsmanship_SuperSkill</li>
+                </YanYu_Martials>
+                <uniqueMartial>True</uniqueMartial> 
+            </li>
+            <li Class="YanYu.HediffCompProperties_WuShangMomentum"></li>
+        </comps>
+
+    </HediffDef>
+
+        <HediffDef ParentName="YanYu_MartialHediffBase">
+        <defName>YanYu_MartialHediff_HuaXuanSwordsmanship</defName>
+        <label>HuaXuanSwordsmanship</label>
+        <description>This character has studied HuaXuanSwordsmanship.</description>
+        <defaultLabelColor>(1.0, 0.713, 0.756)</defaultLabelColor>
+        <defaultInstallPart>Brain</defaultInstallPart>
+        <comps>
+            <li Class="YanYu.HediffCompProperties_MartialHediff">
+                <YanYu_Martials>
+                    <li>YanYu_Martial_HuaXuanSwordsmanship_SuperSkill</li>
+                </YanYu_Martials>
+                <uniqueMartial>True</uniqueMartial> 
+            </li>
+        </comps>
+
+    </HediffDef>
+
+
+    <!-- 拳 -->
+
+    <HediffDef ParentName="YanYu_MartialHediffBase">
+        <defName>YanYu_MartialHediff_BasicFistTechnique</defName>
+        <label>Basic Fist Technique</label>
+        <description>This character has studied Basic Fist Technique.</description>
+        <defaultLabelColor>(0.14, 0.8, 0.95)</defaultLabelColor>
+        <defaultInstallPart>Brain</defaultInstallPart>
+        <comps>
+            <li Class="YanYu.HediffCompProperties_MartialHediff">
+                <YanYu_Martials>
+                    <li>YanYu_Martial_BasicFistTechnique_SuperSkill</li>
+                </YanYu_Martials>
+                <uniqueMartial>False</uniqueMartial>
+            </li>
+        </comps>
+
+    </HediffDef>
+
+    <HediffDef ParentName="YanYu_MartialHediffBase">
+        <defName>YanYu_MartialHediff_PianHuaQiXingQuan</defName>
+        <label>PianHua QiXing Quan</label>
+        <description>This character has studied PianHua QiXing Quan.</description>
+        <defaultLabelColor>(0.14, 0.8, 0.95)</defaultLabelColor>
+        <defaultInstallPart>Brain</defaultInstallPart>
+        <comps>
+            <li Class="YanYu.HediffCompProperties_MartialHediff">
+                <YanYu_Martials>
+                    <li>YanYu_Martial_PianHuaQiXingQuan_SuperSkill</li>
+                </YanYu_Martials>
+                <uniqueMartial>true</uniqueMartial>
+            </li>
+            <li Class="YanYu.HediffCompProperties_PianHuaFistPower"></li>
+        </comps>
+
+    </HediffDef>
+
+</Defs>

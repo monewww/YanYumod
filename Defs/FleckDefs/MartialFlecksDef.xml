@@ -1,0 +1,304 @@
+<Defs>
+    <FleckDef Name="YanYu_MartialEffect_FleckBase" ParentName="FleckBase_Thrown" Abstract="True">
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <realTime>true</realTime>
+        <fadeInTime>0.1</fadeInTime>
+        <solidTime>0</solidTime>
+        <fadeOutTime>0</fadeOutTime>
+    </FleckDef>
+
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_BasicSwordsmanship_fleck1</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/BasicSwordsmanship/fleck1</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.5, 2.14)</drawSize>
+        </graphicData>
+        <solidTime>0.01</solidTime>
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_BasicSwordsmanship_fleck2</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/BasicSwordsmanship/fleck2</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.57, 1.78)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_BasicSwordsmanship_fleck3</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/BasicSwordsmanship/fleck3</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(0.58, 1.28)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_BasicSwordsmanship_fleck2_1</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/BasicSwordsmanship/fleck2_1</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(0.71, 5.07)</drawSize>
+        </graphicData>
+        <solidTime>0.05</solidTime>
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_BasicSwordsmanship_fleck2_2</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/BasicSwordsmanship/fleck2_2</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(0.51, 4.06)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_BasicSwordsmanship_fleck2_3</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/BasicSwordsmanship/fleck2_3</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(0.36, 1.31)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck1</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck1</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.72, 2.24)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.03</fadeOutTime>
+    </FleckDef>
+    
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck2</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck2</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.79, 2.36)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.03</fadeOutTime>
+    </FleckDef>
+    
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck3</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck3</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.56, 2.07)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck4</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck4</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.02, 2.47)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.03</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck5</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck5</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.2, 2.73)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.06</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck6</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck6</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.06, 2.57)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.06</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck7</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck7</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.18, 2.67)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.06</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck8</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck8</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(0.96, 2.72)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck9</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck9</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.81, 1.94)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.1</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck10</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck10</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(2.4, 2.07)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck11</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck11</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(2.7, 3.12)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.03</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck12</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck12</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(2.61, 3.28)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck13</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck13</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(2.85, 3.48)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck14</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck14</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.46, 2.76)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.03</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck15</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck15</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.35, 2.89)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.03</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck16</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck16</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.38, 2.82)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck19</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck19</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(0.2, 2.95)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.1</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck20</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck20</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.2, 3.42)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.06</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck21</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck21</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(2.14, 3.89)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.06</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_WuShangSwordsmanship_fleck22</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/WuShangSwordsmanship/fleck22</texPath>
+            <shaderType>Transparent</shaderType>
+            <drawSize>(1.9, 4.03)</drawSize>
+        </graphicData>
+        <!-- <solidTime>0.1</solidTime> -->
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+
+    <!-- 基础拳法 -->
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_BasicFistTechnique_fleck1</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/BasicFistTechnique/fleck1</texPath>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+    </FleckDef>
+
+    <!-- 偏花七星拳 -->
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_PianHuaQiXingQuan_fleck1</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/PianHuaQiXingQuan/fleck1</texPath>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <fadeInTime>0.02</fadeInTime>
+        <solidTime>0.03</solidTime>
+        <fadeOutTime>0.1</fadeOutTime>
+    </FleckDef>
+    <FleckDef ParentName="YanYu_MartialEffect_FleckBase">
+        <defName>YanYu_MartialEffect_PianHuaQiXingQuan_fleck2</defName>
+        <graphicData>
+            <texPath>YanYu_effect/YanYu_martialEffect/PianHuaQiXingQuan/fleck2</texPath>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <fadeInTime>0.05</fadeInTime>
+        <solidTime>0.4</solidTime>
+        <fadeOutTime>0.05</fadeOutTime>
+    </FleckDef>
+</Defs>

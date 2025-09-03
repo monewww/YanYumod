@@ -1,0 +1,25 @@
+<Defs>
+    <PawnKindDef>
+        <defName>YanYu_NPCNormal</defName>
+        <label>YanYu NPC</label>
+        <race>YanYu_NPC</race>
+        <combatPower>100</combatPower>
+        <hostileToAll>false</hostileToAll>
+        <initialResistanceRange>0~0</initialResistanceRange>
+        <initialWillRange>80~90</initialWillRange>
+    </PawnKindDef>
+
+    <PawnKindDef>
+        <defName>YanYu_Leader</defName>
+        <label>YanYu Leader</label>
+        <race>YanYu_NPC</race>
+        <combatPower>100</combatPower>
+        <hostileToAll>false</hostileToAll>
+        <initialResistanceRange>0~0</initialResistanceRange>
+        <initialWillRange>80~90</initialWillRange>
+        <!-- <factionLeader>true</factionLeader> -->
+        <modExtensions>
+            <li Class = "YanYu.QuestGiver" />
+        </modExtensions>
+    </PawnKindDef>
+</Defs>
